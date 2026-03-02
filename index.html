@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dijes Deportivos – Inicio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#d4a853',
+            dark:   '#0a0a0a',
+            body:   '#1a1a1a',
+            card:   '#242424',
+            border: '#333333',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .section-card {
+      border-left: 3px solid #d4a853;
+    }
+    .placeholder-box {
+      background: repeating-linear-gradient(
+        45deg, #242424, #242424 10px, #2a2a2a 10px, #2a2a2a 20px
+      );
+    }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] font-sans text-[#e5e5e5]">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="bg-[#0a0a0a] sticky top-0 z-50 shadow-lg" style="border-bottom: 1px solid #333;">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </a>
+      <!-- Nav links -->
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"    class="text-[#d4a853] border-b-2 border-[#d4a853] pb-0.5">Inicio</a>
+        <a href="producto.html" class="text-gray-300 hover:text-white transition-colors">Producto</a>
+        <a href="layout.html"   class="text-gray-300 hover:text-white transition-colors">Lay-out</a>
+        <a href="glosario.html" class="text-gray-300 hover:text-white transition-colors">Glosario</a>
+        <a href="about.html"    class="text-gray-300 hover:text-white transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] py-20 px-6 text-center">
+    <p class="text-[#d4a853] text-xs font-bold uppercase tracking-widest mb-3">Proyecto de Ingeniería Industrial</p>
+    <h1 class="text-white text-5xl font-extrabold leading-tight mb-4">
+      Dijes <span class="text-[#d4a853]">Deportivos</span>
+    </h1>
+    <p class="text-[#999] text-base max-w-2xl mx-auto leading-relaxed mb-8">
+      Diseño y manufactura de dijes deportivos mediante tecnologías CNC, CAPP y PLM —
+      análisis completo del proceso productivo desde el concepto hasta el producto terminado.
+    </p>
+    <!-- Quick-nav pills -->
+    <div class="flex flex-wrap justify-center gap-2 mt-6">
+      <a href="#producto"        class="bg-[#d4a853] text-black font-semibold text-xs px-4 py-2 rounded-full hover:opacity-90 transition-colors">Producto</a>
+      <a href="#causa-efecto"    class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Causa-Efecto</a>
+      <a href="#flujo"           class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Flujo del Producto</a>
+      <a href="#layout"          class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Lay-out</a>
+      <a href="#costos"          class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Costos y BOM</a>
+      <a href="#seguridad"       class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Seguridad Industrial</a>
+      <a href="#ergonomia"       class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Ergonomía</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 1 – PRODUCTO
+  ══════════════════════════════════════════ -->
+  <section id="producto" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">01</span>
+        <h2 class="text-2xl font-extrabold text-white">Producto</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Descripción general del dije de caso de estudio y sus características principales.</p>
+
+      <div class="grid grid-cols-2 gap-10 items-start">
+        <!-- Descripción -->
+        <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-8 shadow-lg shadow-black/30">
+          <h3 class="text-lg font-bold text-white mb-3">Descripción del Producto</h3>
+          <p class="text-[#666] text-sm italic">[ Contenido pendiente — describe aquí el dije de caso de estudio: material, dimensiones, proceso de manufactura, características técnicas, etc. ]</p>
+          <div class="placeholder-box rounded-xl h-32 mt-6 flex items-center justify-center">
+            <span class="text-[#666] text-xs">Imagen / descripción del producto</span>
+          </div>
+        </div>
+        <!-- Ficha técnica -->
+        <div>
+          <h3 class="text-lg font-bold text-white mb-4">Ficha Técnica</h3>
+          <table class="w-full text-sm border-collapse">
+            <tbody>
+              <tr class="border-b border-[#333333]">
+                <td class="py-3 pr-4 font-semibold text-[#999] w-44">Material</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="py-3 pr-4 font-semibold text-[#999]">Dimensiones</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="py-3 pr-4 font-semibold text-[#999]">Proceso principal</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="py-3 pr-4 font-semibold text-[#999]">Acabado</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="py-3 pr-4 font-semibold text-[#999]">Tiempo de ciclo</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-semibold text-[#999]">Peso</td>
+                <td class="py-3 text-[#666] italic">[ Pendiente ]</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="producto.html" class="inline-block mt-6 text-[#d4a853] font-semibold text-sm hover:underline">Ver todos los dijes del equipo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 2 – DIAGRAMA CAUSA-EFECTO
+  ══════════════════════════════════════════ -->
+  <section id="causa-efecto" class="py-20 px-6 bg-[#111111]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">02</span>
+        <h2 class="text-2xl font-extrabold text-white">Diagrama Causa-Efecto</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Análisis de Ishikawa — identificación de causas raíz antes y después de mejoras.</p>
+
+      <div class="grid grid-cols-2 gap-8">
+        <!-- Inicial -->
+        <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
+          <div class="bg-[#1c1111] border-b border-[#dc2626] px-6 py-4 flex items-center gap-3">
+            <span class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </span>
+            <h3 class="font-bold text-red-400 text-sm">Diagrama Inicial</h3>
+            <span class="ml-auto text-red-500 text-xs">Antes de mejoras</span>
+          </div>
+          <div class="p-6">
+            <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
+              <div class="text-center">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <p class="text-[#666] text-xs">Insertar diagrama causa-efecto inicial</p>
+                <p class="text-[#555] text-xs mt-1">( imagen, SVG o tabla )</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final -->
+        <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
+          <div class="bg-[#111c14] border-b border-[#059669] px-6 py-4 flex items-center gap-3">
+            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <h3 class="font-bold text-green-400 text-sm">Diagrama Final</h3>
+            <span class="ml-auto text-green-500 text-xs">Después de mejoras</span>
+          </div>
+          <div class="p-6">
+            <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
+              <div class="text-center">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <p class="text-[#666] text-xs">Insertar diagrama causa-efecto final</p>
+                <p class="text-[#555] text-xs mt-1">( imagen, SVG o tabla )</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 3 – DIAGRAMA DE FLUJO DEL PRODUCTO
+  ══════════════════════════════════════════ -->
+  <section id="flujo" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">03</span>
+        <h2 class="text-2xl font-extrabold text-white">Diagrama de Flujo del Producto</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Representación visual de cada etapa del proceso productivo, desde materia prima hasta producto terminado.</p>
+
+      <div class="bg-[#242424] rounded-lg border border-[#333333] p-8 shadow-lg shadow-black/30">
+        <!-- Flujo placeholder — se puede reemplazar con un diagrama real -->
+        <div class="placeholder-box rounded-xl h-80 flex items-center justify-center mb-6">
+          <div class="text-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-3">
+              <rect x="3" y="3" width="7" height="4" rx="1"/><rect x="14" y="3" width="7" height="4" rx="1"/>
+              <rect x="3" y="17" width="7" height="4" rx="1"/><rect x="14" y="17" width="7" height="4" rx="1"/>
+              <path d="M10 5h4M17 7v10M7 7v10M10 19h4"/>
+            </svg>
+            <p class="text-[#666] text-sm">Insertar diagrama de flujo del producto</p>
+            <p class="text-[#555] text-xs mt-1">( imagen, SVG, HTML o embed )</p>
+          </div>
+        </div>
+        <!-- Etapas del proceso (texto) -->
+        <div class="grid grid-cols-5 gap-4">
+          <div class="text-center">
+            <div class="w-10 h-10 bg-[#d4a853] rounded-full flex items-center justify-center text-black text-xs font-bold mx-auto mb-2">1</div>
+            <p class="text-[#999] text-xs font-semibold">Materia Prima</p>
+            <p class="text-[#666] text-xs mt-1 italic">[ Pendiente ]</p>
+          </div>
+          <div class="flex items-start pt-3 justify-center text-[#555] text-xl">→</div>
+          <div class="text-center">
+            <div class="w-10 h-10 bg-[#d4a853] rounded-full flex items-center justify-center text-black text-xs font-bold mx-auto mb-2">2</div>
+            <p class="text-[#999] text-xs font-semibold">Maquinado CNC</p>
+            <p class="text-[#666] text-xs mt-1 italic">[ Pendiente ]</p>
+          </div>
+          <div class="flex items-start pt-3 justify-center text-[#555] text-xl">→</div>
+          <div class="text-center">
+            <div class="w-10 h-10 bg-[#d4a853] rounded-full flex items-center justify-center text-black text-xs font-bold mx-auto mb-2">3</div>
+            <p class="text-[#999] text-xs font-semibold">[ Etapa ]</p>
+            <p class="text-[#666] text-xs mt-1 italic">[ Pendiente ]</p>
+          </div>
+        </div>
+        <p class="text-[#555] text-xs text-center mt-4 italic">Agrega todas las etapas del proceso conforme se definan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 4 – LAY-OUT
+  ══════════════════════════════════════════ -->
+  <section id="layout" class="py-20 px-6 bg-[#111111]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">04</span>
+        <h2 class="text-2xl font-extrabold text-white">Lay-out</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Distribución de planta — vistas 2D y 3D del área de manufactura.</p>
+
+      <!-- Tabs 2D / 3D -->
+      <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
+        <div class="flex border-b border-[#333333]">
+          <button id="tab2d" onclick="switchTab('2d')"
+            class="flex-1 py-4 text-sm font-semibold text-[#d4a853] bg-[#242424] border-b-2 border-[#d4a853] transition-colors">
+            Vista 2D
+          </button>
+          <button id="tab3d" onclick="switchTab('3d')"
+            class="flex-1 py-4 text-sm font-semibold text-[#737373] hover:text-white bg-transparent transition-colors">
+            Vista 3D
+          </button>
+        </div>
+
+        <div id="panel2d" class="p-8">
+          <div class="placeholder-box rounded-xl h-96 flex items-center justify-center">
+            <div class="text-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-3">
+                <rect x="2" y="2" width="20" height="20" rx="2"/><path d="M2 8h20M2 14h20M8 2v20M14 2v20"/>
+              </svg>
+              <p class="text-[#666] text-sm">Insertar lay-out 2D</p>
+              <p class="text-[#555] text-xs mt-1">( plano en imagen, AutoCAD export, SVG )</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel3d" class="p-8 hidden">
+          <div class="placeholder-box rounded-xl h-96 flex items-center justify-center">
+            <div class="text-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-3">
+                <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12L3 7M12 12l9-5M12 12v10"/>
+              </svg>
+              <p class="text-[#666] text-sm">Insertar lay-out 3D</p>
+              <p class="text-[#555] text-xs mt-1">( render, modelo 3D embebido, imagen )</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center mt-4">
+        <a href="layout.html" class="text-[#d4a853] font-semibold text-sm hover:underline">Ver página completa de Lay-out →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 5 – COSTOS DE PRODUCCIÓN Y BOM
+  ══════════════════════════════════════════ -->
+  <section id="costos" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">05</span>
+        <h2 class="text-2xl font-extrabold text-white">Costos de Producción y BOM</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Bill of Materials (Lista de materiales) y desglose de costos directos e indirectos.</p>
+
+      <div class="grid grid-cols-2 gap-8">
+        <!-- BOM -->
+        <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-6 shadow-lg shadow-black/30">
+          <h3 class="font-bold text-white mb-4">Bill of Materials (BOM)</h3>
+          <table class="w-full text-xs border-collapse">
+            <thead>
+              <tr class="bg-black text-[#d4a853]">
+                <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Componente</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Cantidad</th>
+                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Costo Unit.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">1</td>
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">2</td>
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">3</td>
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+              <tr class="bg-[#1a1a1a]">
+                <td colspan="3" class="px-3 py-2.5 font-semibold text-[#999] text-right">Total BOM:</td>
+                <td class="px-3 py-2.5 font-bold text-[#d4a853]">[ Pendiente ]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Desglose de costos -->
+        <div class="bg-[#242424] rounded-lg p-6 border border-[#333333] shadow-lg shadow-black/30">
+          <h3 class="font-bold text-white mb-4">Desglose de Costos</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
+              <span class="text-sm text-[#999]">Materia prima directa</span>
+              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
+              <span class="text-sm text-[#999]">Mano de obra directa</span>
+              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
+              <span class="text-sm text-[#999]">Costos indirectos de fab.</span>
+              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
+              <span class="text-sm text-[#999]">Maquinaria / herramienta</span>
+              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex justify-between items-center py-3 bg-[#242424] border border-[#333] rounded-xl px-3 mt-2">
+              <span class="font-bold text-white">Costo total unitario</span>
+              <span class="font-bold text-[#d4a853]">[ Pendiente ]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 6 – SEGURIDAD INDUSTRIAL
+  ══════════════════════════════════════════ -->
+  <section id="seguridad" class="py-20 px-6 bg-[#111111]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">06</span>
+        <h2 class="text-2xl font-extrabold text-white">Seguridad Industrial</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Normas, EPP y medidas de seguridad aplicadas durante el proceso de manufactura.</p>
+
+      <div class="grid grid-cols-3 gap-6">
+        <!-- EPP -->
+        <div class="bg-[#242424] rounded-lg border border-[#333] p-6 shadow-lg shadow-black/30">
+          <div class="w-10 h-10 bg-[#2a2418] rounded-xl flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10H2A10 10 0 0 1 12 2z"/><rect x="2" y="12" width="20" height="4" rx="1"/></svg>
+          </div>
+          <h4 class="font-bold text-white mb-2">EPP Requerido</h4>
+          <ul class="text-[#666] text-xs space-y-1.5 italic">
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+          </ul>
+        </div>
+        <!-- Normas -->
+        <div class="bg-[#242424] rounded-lg border border-[#333] p-6 shadow-lg shadow-black/30">
+          <div class="w-10 h-10 bg-[#141c24] rounded-xl flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4b7399" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <h4 class="font-bold text-white mb-2">Normas Aplicables</h4>
+          <ul class="text-[#666] text-xs space-y-1.5 italic">
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+          </ul>
+        </div>
+        <!-- Riesgos -->
+        <div class="bg-[#242424] rounded-lg border border-[#333] p-6 shadow-lg shadow-black/30">
+          <div class="w-10 h-10 bg-[#241414] rounded-xl flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h4 class="font-bold text-white mb-2">Riesgos Identificados</h4>
+          <ul class="text-[#666] text-xs space-y-1.5 italic">
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+            <li>• [ Pendiente ]</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Área de imagen/diagrama de seguridad -->
+      <div class="mt-8 bg-[#242424] rounded-lg border border-[#333333] p-6 shadow-lg shadow-black/30">
+        <h3 class="font-bold text-white mb-4">Diagrama / Mapa de Riesgos</h3>
+        <div class="placeholder-box rounded-xl h-52 flex items-center justify-center">
+          <p class="text-[#666] text-sm italic">[ Insertar mapa de riesgos o imagen de señalamientos ]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 7 – ANÁLISIS ERGONÓMICO
+  ══════════════════════════════════════════ -->
+  <section id="ergonomia" class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">07</span>
+        <h2 class="text-2xl font-extrabold text-white">Análisis Ergonómico</h2>
+      </div>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Evaluación de posturas, movimientos y condiciones de trabajo del operador.</p>
+
+      <div class="grid grid-cols-2 gap-8">
+        <!-- Imagen / diagrama ergonómico -->
+        <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-6 shadow-lg shadow-black/30">
+          <h3 class="font-bold text-white mb-4">Diagrama Ergonómico</h3>
+          <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
+            <div class="text-center">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2">
+                <circle cx="12" cy="4" r="2"/><path d="M12 6v6l3 3m-6-3 3 3M9 9H6a1 1 0 0 0 0 2h3M15 9h3a1 1 0 0 1 0 2h-3M12 12v6l2 2m-4-2 2 2"/>
+              </svg>
+              <p class="text-[#666] text-xs">Insertar análisis ergonómico</p>
+              <p class="text-[#555] text-xs mt-1">( REBA, RULA, OWAS u otro )</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla de evaluación -->
+        <div>
+          <h3 class="font-bold text-white mb-4">Resultados de Evaluación</h3>
+          <table class="w-full text-xs border-collapse">
+            <thead>
+              <tr class="bg-black text-[#d4a853]">
+                <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">Parámetro</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Método</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Puntuación</th>
+                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Nivel de Riesgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mt-6 space-y-3">
+            <p class="text-sm font-semibold text-white">Conclusiones y Recomendaciones</p>
+            <div class="bg-[#1a1a1a] rounded-xl p-4 border border-[#333]">
+              <p class="text-[#666] text-xs italic">[ Insertar conclusiones del análisis ergonómico: medidas correctivas, rediseño de estación de trabajo, etc. ]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-[#0a0a0a] py-10 px-6" style="border-top: 1px solid #333;">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="text-white font-bold text-sm">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </div>
+      <div class="flex gap-6 text-[#525252] text-xs">
+        <a href="index.html"    class="hover:text-[#d4a853] transition-colors">Inicio</a>
+        <a href="producto.html" class="hover:text-[#d4a853] transition-colors">Producto</a>
+        <a href="layout.html"   class="hover:text-[#d4a853] transition-colors">Lay-out</a>
+        <a href="glosario.html" class="hover:text-[#d4a853] transition-colors">Glosario</a>
+        <a href="about.html"    class="hover:text-[#d4a853] transition-colors">About</a>
+      </div>
+      <p class="text-[#525252] text-xs">Proyecto Ingeniería Industrial · 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tab) {
+      const panel2d = document.getElementById('panel2d');
+      const panel3d = document.getElementById('panel3d');
+      const tab2d   = document.getElementById('tab2d');
+      const tab3d   = document.getElementById('tab3d');
+
+      if (tab === '2d') {
+        panel2d.classList.remove('hidden');
+        panel3d.classList.add('hidden');
+        tab2d.className = 'flex-1 py-4 text-sm font-semibold text-[#d4a853] bg-[#242424] border-b-2 border-[#d4a853] transition-colors';
+        tab3d.className = 'flex-1 py-4 text-sm font-semibold text-[#737373] hover:text-white bg-transparent transition-colors';
+      } else {
+        panel2d.classList.add('hidden');
+        panel3d.classList.remove('hidden');
+        tab3d.className = 'flex-1 py-4 text-sm font-semibold text-[#d4a853] bg-[#242424] border-b-2 border-[#d4a853] transition-colors';
+        tab2d.className = 'flex-1 py-4 text-sm font-semibold text-[#737373] hover:text-white bg-transparent transition-colors';
+      }
+    }
+  </script>
+
+</body>
+</html>

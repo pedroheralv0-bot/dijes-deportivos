@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dijes Deportivos – Producto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#1e3a5f', accent: '#d4a853', dark: '#0a0a0a', body: '#1a1a1a', card: '#242424', border: '#333333' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .placeholder-box {
+      background: repeating-linear-gradient(
+        45deg, #242424, #242424 10px, #2a2a2a 10px, #2a2a2a 20px
+      );
+    }
+    .dije-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+    .dije-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] font-sans text-[#e5e5e5]">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="bg-[#0a0a0a] sticky top-0 z-50 shadow-lg" style="border-bottom:1px solid #333">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"    class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+        <a href="producto.html" class="text-[#d4a853] border-b-2 border-[#d4a853] pb-0.5">Producto</a>
+        <a href="layout.html"   class="text-gray-300 hover:text-white transition-colors">Lay-out</a>
+        <a href="glosario.html" class="text-gray-300 hover:text-white transition-colors">Glosario</a>
+        <a href="about.html"    class="text-gray-300 hover:text-white transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <section class="bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] py-16 px-6 text-center">
+    <p class="text-[#d4a853] text-xs font-bold uppercase tracking-widest mb-3">Colección del Equipo</p>
+    <h1 class="text-white text-4xl font-extrabold mb-3">Los 8 <span class="text-[#d4a853]">Dijes</span></h1>
+    <p class="text-[#999] text-sm max-w-xl mx-auto">Cada integrante diseñó su propio dije deportivo. El <strong class="text-[#d4a853]">dije de caso de estudio</strong> es el que se analiza a profundidad en este proyecto.</p>
+  </section>
+
+  <!-- ── CASO DE ESTUDIO (destacado) ── -->
+  <section class="py-16 px-6 bg-[#242424] border-b-4 border-[#d4a853]">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-[#d4a853] text-black text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">★ Caso de Estudio</span>
+        <h2 class="text-2xl font-extrabold text-white">Dije Principal — Análisis Completo</h2>
+      </div>
+
+      <div class="grid grid-cols-2 gap-10 items-start">
+        <!-- Imagen -->
+        <div>
+          <div class="placeholder-box rounded-lg h-72 flex items-center justify-center border-2 border-[#d4a853]">
+            <div class="text-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="1.5" class="mx-auto mb-3">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <p class="text-[#d4a853] text-sm font-semibold">Imagen del dije de caso de estudio</p>
+              <p class="text-[#737373] text-xs mt-1">( foto, render CAD, o diseño )</p>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <button class="flex-1 border border-[#d4a853] text-[#d4a853] text-xs font-semibold py-2 rounded-lg hover:bg-[#d4a853]/10">Vista frontal</button>
+            <button class="flex-1 border border-[#333] text-[#737373] text-xs font-semibold py-2 rounded-lg hover:bg-[#333]/30">Vista lateral</button>
+            <button class="flex-1 border border-[#333] text-[#737373] text-xs font-semibold py-2 rounded-lg hover:bg-[#333]/30">Vista 3D</button>
+          </div>
+        </div>
+
+        <!-- Detalles -->
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1">[ Nombre del dije ]</h3>
+          <p class="text-[#737373] text-xs mb-5 italic">Integrante: Pedro Hernández Álvarez</p>
+
+          <div class="space-y-3 text-sm">
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Material</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Dimensiones</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Proceso de maquinado</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Acabado superficial</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Tiempo de ciclo</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3 border-b border-[#333] pb-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Tolerancias</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="font-semibold text-[#999] w-36 shrink-0">Deporte asociado</span>
+              <span class="text-[#737373] italic">[ Pendiente ]</span>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-[#1a1a1a] rounded-lg border border-[#333] p-4">
+            <p class="text-xs font-bold text-[#e5e5e5] mb-2">Descripción técnica</p>
+            <p class="text-[#737373] text-xs leading-relaxed italic">[ Insertar descripción técnica completa del dije de caso de estudio: diseño, características geométricas, proceso de manufactura, particularidades, etc. ]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOS 8 DIJES ── -->
+  <section class="py-16 px-6 bg-[#1a1a1a]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-white mb-2">Todos los Dijes del Equipo</h2>
+      <div class="w-12 h-1 bg-[#d4a853] rounded-full mb-10"></div>
+
+      <div class="grid grid-cols-4 gap-5">
+
+        <!-- Dije 1 – CASO DE ESTUDIO -->
+        <div class="dije-card bg-[#242424] rounded-lg border-2 border-[#d4a853] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="1.5" class="mx-auto"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <span class="bg-[#d4a853]/20 text-[#d4a853] text-xs font-bold px-2 py-0.5 rounded-full">Caso de estudio</span>
+            <p class="font-bold text-[#e5e5e5] text-sm mt-2">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">Pedro Hernández</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <!-- Dijes 2-8 -->
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+        <div class="dije-card bg-[#242424] rounded-lg border border-[#333] overflow-hidden shadow-sm">
+          <div class="placeholder-box h-40 flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#525252" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="p-4">
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre del dije ]</p>
+            <p class="text-[#737373] text-xs mt-1">[ Integrante ]</p>
+            <p class="text-[#525252] text-xs mt-1 italic">[ Deporte ]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-[#0a0a0a] py-10 px-6" style="border-top:1px solid #333">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="text-white font-bold text-sm">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </div>
+      <div class="flex gap-6 text-[#525252] text-xs">
+        <a href="index.html"    class="hover:text-[#d4a853] transition-colors">Inicio</a>
+        <a href="producto.html" class="hover:text-[#d4a853] transition-colors">Producto</a>
+        <a href="layout.html"   class="hover:text-[#d4a853] transition-colors">Lay-out</a>
+        <a href="glosario.html" class="hover:text-[#d4a853] transition-colors">Glosario</a>
+        <a href="about.html"    class="hover:text-[#d4a853] transition-colors">About</a>
+      </div>
+      <p class="text-[#525252] text-xs">Proyecto Ingeniería Industrial · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

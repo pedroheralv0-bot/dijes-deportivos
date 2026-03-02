@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dijes Deportivos – Lay-out</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#d4a853', dark: '#0a0a0a', body: '#1a1a1a', card: '#242424', border: '#333333' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .placeholder-box {
+      background: repeating-linear-gradient(
+        45deg, #242424, #242424 10px, #2a2a2a 10px, #2a2a2a 20px
+      );
+    }
+    .tab-btn.active { background:#d4a853; color:#000; font-weight:700; border-color:#d4a853; }
+    .tab-btn { transition: all 0.2s; }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] font-sans text-[#e5e5e5]">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="bg-[#0a0a0a] sticky top-0 z-50 shadow-lg" style="border-bottom:1px solid #333">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"    class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+        <a href="producto.html" class="text-gray-300 hover:text-white transition-colors">Producto</a>
+        <a href="layout.html"   class="text-[#d4a853] border-b-2 border-[#d4a853] pb-0.5">Lay-out</a>
+        <a href="glosario.html" class="text-gray-300 hover:text-white transition-colors">Glosario</a>
+        <a href="about.html"    class="text-gray-300 hover:text-white transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <section class="bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] py-16 px-6 text-center">
+    <p class="text-[#d4a853] text-xs font-bold uppercase tracking-widest mb-3">Distribución de Planta</p>
+    <h1 class="text-white text-4xl font-extrabold mb-3">Lay-out del <span class="text-[#d4a853]">Área de Manufactura</span></h1>
+    <p class="text-[#999] text-sm max-w-xl mx-auto">Disposición física de máquinas, estaciones de trabajo y flujos de material en el área de producción de dijes deportivos.</p>
+  </section>
+
+  <!-- ── SELECTOR 2D / 3D ── -->
+  <section class="py-16 px-6 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Tabs -->
+      <div class="flex gap-3 mb-8">
+        <button id="btn2d" class="tab-btn active border-2 rounded-lg px-8 py-3 text-sm" onclick="showView('2d')">
+          Vista 2D — Plano de Planta
+        </button>
+        <button id="btn3d" class="tab-btn border-2 border-[#333] text-[#737373] rounded-lg px-8 py-3 text-sm" onclick="showView('3d')">
+          Vista 3D — Modelo / Render
+        </button>
+      </div>
+
+      <!-- Panel 2D -->
+      <div id="view2d">
+        <div class="grid grid-cols-3 gap-6 mb-6">
+          <!-- Leyenda -->
+          <div class="col-span-1 bg-[#242424] rounded-lg border border-[#333] p-6">
+            <h3 class="font-bold text-[#e5e5e5] mb-4 text-sm">Leyenda</h3>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-blue-600 rounded"></div>
+                <span class="text-[#999] text-xs">Máquinas CNC</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-green-500 rounded"></div>
+                <span class="text-[#999] text-xs">Estación de ensamble</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-amber-400 rounded"></div>
+                <span class="text-[#999] text-xs">Almacén MP</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-red-400 rounded"></div>
+                <span class="text-[#999] text-xs">Almacén PT</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-slate-300 rounded"></div>
+                <span class="text-[#999] text-xs">Área de tránsito</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-purple-400 rounded"></div>
+                <span class="text-[#999] text-xs">Control de calidad</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#333]">
+              <h4 class="font-semibold text-[#737373] text-xs mb-3">Datos del lay-out</h4>
+              <div class="space-y-2 text-xs">
+                <div class="flex justify-between">
+                  <span class="text-[#737373]">Área total</span>
+                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[#737373]">Tipo de distribución</span>
+                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[#737373]">Nº de estaciones</span>
+                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano 2D -->
+          <div class="col-span-2">
+            <div class="placeholder-box rounded-lg border-2 border-dashed border-[#555] h-[480px] flex items-center justify-center">
+              <div class="text-center">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.2" class="mx-auto mb-4">
+                  <rect x="2" y="2" width="20" height="20" rx="2"/>
+                  <path d="M2 8h20M2 14h20M8 2v20M14 2v20"/>
+                  <rect x="4" y="4" width="3" height="3" fill="#3b82f6" rx="0.5"/>
+                  <rect x="9" y="4" width="3" height="3" fill="#3b82f6" rx="0.5"/>
+                </svg>
+                <p class="text-[#999] text-sm font-semibold">Insertar plano 2D del lay-out</p>
+                <p class="text-[#737373] text-xs mt-1">( imagen PNG/JPG, export de AutoCAD, SVG o PDF )</p>
+                <p class="text-[#555] text-xs mt-3 max-w-xs mx-auto">Puedes pegar aquí el archivo de imagen o incrustar un PDF de AutoCAD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descripción 2D -->
+        <div class="bg-[#141c24] border-l-4 border-[#4b7399] rounded-r-lg p-6">
+          <h3 class="font-bold text-[#4b7399] text-sm mb-2">Descripción del Lay-out 2D</h3>
+          <p class="text-[#3d6080] text-xs leading-relaxed italic">[ Insertar descripción de la distribución de planta: tipo de layout (por proceso, por producto, celular, etc.), flujo de materiales, justificación de la disposición elegida, distancias recorridas, etc. ]</p>
+        </div>
+      </div>
+
+      <!-- Panel 3D (oculto por defecto) -->
+      <div id="view3d" class="hidden">
+        <div class="grid grid-cols-3 gap-6 mb-6">
+          <!-- Info 3D -->
+          <div class="col-span-1 bg-[#242424] rounded-lg border border-[#333] p-6">
+            <h3 class="font-bold text-[#e5e5e5] mb-4 text-sm">Información del Modelo 3D</h3>
+            <div class="space-y-3 text-xs">
+              <div class="flex justify-between border-b border-[#333] pb-2">
+                <span class="text-[#737373]">Software usado</span>
+                <span class="text-[#666] italic">[ Pendiente ]</span>
+              </div>
+              <div class="flex justify-between border-b border-[#333] pb-2">
+                <span class="text-[#737373]">Escala</span>
+                <span class="text-[#666] italic">[ Pendiente ]</span>
+              </div>
+              <div class="flex justify-between border-b border-[#333] pb-2">
+                <span class="text-[#737373]">Área representada</span>
+                <span class="text-[#666] italic">[ Pendiente ]</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#737373]">Versión</span>
+                <span class="text-[#666] italic">[ Pendiente ]</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#333]">
+              <h4 class="font-semibold text-[#737373] text-xs mb-3">Vistas disponibles</h4>
+              <div class="space-y-2">
+                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista isométrica</button>
+                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista superior</button>
+                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista frontal</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Render 3D -->
+          <div class="col-span-2">
+            <div class="placeholder-box rounded-lg border-2 border-dashed border-[#555] h-[480px] flex items-center justify-center">
+              <div class="text-center">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.2" class="mx-auto mb-4">
+                  <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/>
+                  <path d="M12 12L3 7M12 12l9-5M12 12v10"/>
+                </svg>
+                <p class="text-[#999] text-sm font-semibold">Insertar modelo / render 3D del lay-out</p>
+                <p class="text-[#737373] text-xs mt-1">( render de SolidWorks, Fusion 360, SketchUp, imagen )</p>
+                <p class="text-[#555] text-xs mt-3 max-w-xs mx-auto">También puedes incrustar un visor 3D interactivo con iframe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descripción 3D -->
+        <div class="bg-[#1c1424] border-l-4 border-[#7b4b99] rounded-r-lg p-6">
+          <h3 class="font-bold text-[#7b4b99] text-sm mb-2">Descripción del Modelo 3D</h3>
+          <p class="text-[#634080] text-xs leading-relaxed italic">[ Insertar descripción del modelo 3D: herramienta utilizada, perspectivas del área, elementos modelados, observaciones sobre ergonomía y seguridad visible en el modelo, etc. ]</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-[#0a0a0a] py-10 px-6" style="border-top:1px solid #333">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="text-white font-bold text-sm">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </div>
+      <div class="flex gap-6 text-[#525252] text-xs">
+        <a href="index.html"    class="hover:text-[#d4a853] transition-colors">Inicio</a>
+        <a href="producto.html" class="hover:text-[#d4a853] transition-colors">Producto</a>
+        <a href="layout.html"   class="hover:text-[#d4a853] transition-colors">Lay-out</a>
+        <a href="glosario.html" class="hover:text-[#d4a853] transition-colors">Glosario</a>
+        <a href="about.html"    class="hover:text-[#d4a853] transition-colors">About</a>
+      </div>
+      <p class="text-gray-600 text-xs">Proyecto Ingeniería Industrial · 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    function showView(view) {
+      document.getElementById('view2d').classList.toggle('hidden', view !== '2d');
+      document.getElementById('view3d').classList.toggle('hidden', view !== '3d');
+
+      const btn2d = document.getElementById('btn2d');
+      const btn3d = document.getElementById('btn3d');
+
+      if (view === '2d') {
+        btn2d.className = 'tab-btn active border-2 rounded-lg px-8 py-3 text-sm';
+        btn3d.className = 'tab-btn border-2 border-[#333] text-[#737373] rounded-lg px-8 py-3 text-sm';
+      } else {
+        btn3d.className = 'tab-btn active border-2 rounded-lg px-8 py-3 text-sm';
+        btn2d.className = 'tab-btn border-2 border-[#333] text-[#737373] rounded-lg px-8 py-3 text-sm';
+      }
+    }
+  </script>
+
+</body>
+</html>

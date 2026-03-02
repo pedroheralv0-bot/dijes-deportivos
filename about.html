@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dijes Deportivos – About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#d4a853', dark: '#0a0a0a', body: '#1a1a1a', card: '#242424', border: '#333333' },
+          fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .placeholder-box {
+      background: repeating-linear-gradient(
+        45deg, #242424, #242424 10px, #2a2a2a 10px, #2a2a2a 20px
+      );
+    }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] font-sans text-[#e5e5e5]">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="bg-[#0a0a0a] sticky top-0 z-50 shadow-lg" style="border-bottom:1px solid #333">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"    class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+        <a href="producto.html" class="text-gray-300 hover:text-white transition-colors">Producto</a>
+        <a href="layout.html"   class="text-gray-300 hover:text-white transition-colors">Lay-out</a>
+        <a href="glosario.html" class="text-gray-300 hover:text-white transition-colors">Glosario</a>
+        <a href="about.html"    class="text-[#d4a853] border-b-2 border-[#d4a853] pb-0.5">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <section class="bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] py-16 px-6 text-center">
+    <p class="text-[#d4a853] text-xs font-bold uppercase tracking-widest mb-3">El Equipo</p>
+    <h1 class="text-white text-4xl font-extrabold mb-3">Quiénes <span class="text-[#d4a853]">Somos</span></h1>
+    <p class="text-[#999] text-sm max-w-xl mx-auto">Equipo de estudiantes de Ingeniería Industrial trabajando en el diseño y manufactura de dijes deportivos mediante tecnologías avanzadas de producción.</p>
+  </section>
+
+  <!-- ── QUIÉNES SOMOS ── -->
+  <section class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-white mb-2">Acerca del Proyecto</h2>
+      <div class="w-12 h-1 bg-[#d4a853] rounded-full mb-8"></div>
+
+      <div class="grid grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-[#737373] text-sm leading-relaxed mb-4 italic">
+            [ Insertar descripción del equipo y del proyecto: misión, contexto académico, objetivo general del proyecto Dijes Deportivos. ]
+          </p>
+          <div class="bg-[#2a2418] border-l-4 border-[#d4a853] rounded-r-xl p-5 mt-6">
+            <h3 class="font-bold text-[#e5e5e5] mb-1 text-sm">Misión</h3>
+            <p class="text-[#999] text-xs italic">[ Pendiente ]</p>
+          </div>
+          <div class="bg-[#141c24] border-l-4 border-[#4b7399] rounded-r-xl p-5 mt-4">
+            <h3 class="font-bold text-[#e5e5e5] mb-1 text-sm">Visión</h3>
+            <p class="text-[#999] text-xs italic">[ Pendiente ]</p>
+          </div>
+          <div class="bg-[#111c14] border-l-4 border-[#059669] rounded-r-xl p-5 mt-4">
+            <h3 class="font-bold text-[#e5e5e5] mb-1 text-sm">Objetivo General</h3>
+            <p class="text-[#999] text-xs italic">[ Pendiente ]</p>
+          </div>
+        </div>
+        <div class="placeholder-box rounded-lg h-72 flex items-center justify-center">
+          <p class="text-[#666] text-xs italic">[ Foto del equipo o logotipo del proyecto ]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTEGRANTES ── -->
+  <section class="py-20 px-6 bg-[#111111]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-white mb-2">Integrantes del Equipo</h2>
+      <div class="w-12 h-1 bg-[#d4a853] rounded-full mb-10"></div>
+
+      <div class="grid grid-cols-4 gap-5">
+        <!-- Cada tarjeta representa un integrante -->
+        <!-- INTEGRANTE 1 (Pedro – dije de caso de estudio) -->
+        <div class="bg-[#242424] rounded-lg border-2 border-[#d4a853] shadow-lg shadow-black/30 overflow-hidden">
+          <div class="bg-[#d4a853] py-1 text-center">
+            <span class="text-black text-xs font-bold">Caso de Estudio</span>
+          </div>
+          <div class="p-5 text-center">
+            <div class="w-14 h-14 bg-[#2a2418] rounded-full mx-auto mb-3 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+            </div>
+            <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+            <p class="text-[#999] text-xs mt-1 italic">[ Rol ]</p>
+            <p class="text-[#d4a853] text-xs mt-2 font-semibold">Dije: [ Pendiente ]</p>
+          </div>
+        </div>
+
+        <!-- INTEGRANTES 2-8 -->
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+
+        <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-5 text-center">
+          <div class="w-14 h-14 bg-[#1a1a1a] rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+          </div>
+          <p class="font-bold text-[#e5e5e5] text-sm">[ Nombre ]</p>
+          <p class="text-[#737373] text-xs mt-1 italic">[ Rol ]</p>
+          <p class="text-[#666] text-xs mt-2 italic">Dije: [ Pendiente ]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ORGANIGRAMA ── -->
+  <section class="py-20 px-6 bg-[#1a1a1a]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-white mb-2">Organigrama</h2>
+      <div class="w-12 h-1 bg-[#d4a853] rounded-full mb-10"></div>
+
+      <div class="bg-[#242424] rounded-lg border border-[#333] p-8">
+        <!-- Organigrama placeholder -->
+        <div class="placeholder-box rounded-xl h-80 flex items-center justify-center mb-4">
+          <div class="text-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5" class="mx-auto mb-3">
+              <rect x="9" y="2" width="6" height="4" rx="1"/>
+              <rect x="2" y="14" width="6" height="4" rx="1"/>
+              <rect x="9" y="14" width="6" height="4" rx="1"/>
+              <rect x="16" y="14" width="6" height="4" rx="1"/>
+              <path d="M12 6v4M5 14V11H19v3"/>
+            </svg>
+            <p class="text-[#999] text-sm">Insertar organigrama del equipo</p>
+            <p class="text-[#666] text-xs mt-1">( imagen, SVG, o HTML )</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-[#0a0a0a] py-10 px-6" style="border-top:1px solid #333">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-[#d4a853] rounded-full flex items-center justify-center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="text-white font-bold text-sm">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
+      </div>
+      <div class="flex gap-6 text-[#525252] text-xs">
+        <a href="index.html"    class="hover:text-[#d4a853] transition-colors">Inicio</a>
+        <a href="producto.html" class="hover:text-[#d4a853] transition-colors">Producto</a>
+        <a href="layout.html"   class="hover:text-[#d4a853] transition-colors">Lay-out</a>
+        <a href="glosario.html" class="hover:text-[#d4a853] transition-colors">Glosario</a>
+        <a href="about.html"    class="hover:text-[#d4a853] transition-colors">About</a>
+      </div>
+      <p class="text-gray-600 text-xs">Proyecto Ingeniería Industrial · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
