@@ -152,44 +152,80 @@
       </div>
       <p class="text-[#737373] text-sm mb-10 ml-11">Análisis de Ishikawa — identificación de causas raíz antes y después de mejoras.</p>
 
-      <div class="grid grid-cols-2 gap-8">
-        <!-- Inicial -->
-        <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
-          <div class="bg-[#1c1111] border-b border-[#dc2626] px-6 py-4 flex items-center gap-3">
-            <span class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </span>
-            <h3 class="font-bold text-red-400 text-sm">Diagrama Inicial</h3>
-            <span class="ml-auto text-red-500 text-xs">Antes de mejoras</span>
-          </div>
-          <div class="p-6">
-            <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
-              <div class="text-center">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <p class="text-[#666] text-xs">Insertar diagrama causa-efecto inicial</p>
-                <p class="text-[#555] text-xs mt-1">( imagen, SVG o tabla )</p>
-              </div>
-            </div>
-          </div>
+      <!-- Diagrama Ishikawa -->
+      <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
+        <div class="bg-[#1c1111] border-b border-[#dc2626] px-6 py-4 flex items-center gap-3">
+          <span class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </span>
+          <h3 class="font-bold text-red-400 text-sm">Diagrama Ishikawa</h3>
+          <span class="ml-auto text-red-500 text-xs">Produccion lenta y piezas con mal acabado</span>
         </div>
-
-        <!-- Final -->
-        <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30">
-          <div class="bg-[#111c14] border-b border-[#059669] px-6 py-4 flex items-center gap-3">
-            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-            </span>
-            <h3 class="font-bold text-green-400 text-sm">Diagrama Final</h3>
-            <span class="ml-auto text-green-500 text-xs">Después de mejoras</span>
+        <div class="p-6">
+          <img src="assets/ishikawa.jpeg" alt="Diagrama Ishikawa - Causa y Efecto" class="w-full rounded-xl bg-white p-4" />
+          <p class="text-[#999] text-xs mt-4 text-center"><strong class="text-red-400">Resultado:</strong> baja produccion + alto costo + calidad irregular</p>
+        </div>
+        <!-- Resumen de las 6M -->
+        <div class="px-6 pb-6 grid grid-cols-3 gap-4">
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Mano de Obra</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Trabajo manual en casi todas las operaciones</li>
+              <li>- Mucho tiempo dedicado al pulido</li>
+              <li>- Fatiga por tareas repetitivas</li>
+              <li>- Resultados dependen del operador</li>
+              <li>- Bajo interes en el trabajo</li>
+            </ul>
           </div>
-          <div class="p-6">
-            <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
-              <div class="text-center">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <p class="text-[#666] text-xs">Insertar diagrama causa-efecto final</p>
-                <p class="text-[#555] text-xs mt-1">( imagen, SVG o tabla )</p>
-              </div>
-            </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Metodo</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Operaciones sin orden definido</li>
+              <li>- Reprocesos por acabado superficial</li>
+              <li>- Ajustes improvisados durante fabricacion</li>
+              <li>- Flujo interrumpido entre estaciones</li>
+              <li>- Tiempos de produccion muy largos</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Maquinaria</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Corte mecanico tradicional</li>
+              <li>- Precision limitada en formas complejas</li>
+              <li>- Bajo rendimiento del equipo</li>
+              <li>- Necesidad constante de intervencion humana</li>
+              <li>- Produccion inestable</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Materiales</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Acero inoxidable dificil de maquinar</li>
+              <li>- Rebabas despues del corte</li>
+              <li>- Piezas requieren retrabajo</li>
+              <li>- Variacion en el acabado</li>
+              <li>- Desperdicio de material</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Medio Ambiente</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Lay-out desordenado</li>
+              <li>- Traslados innecesarios de piezas</li>
+              <li>- Iluminacion deficiente</li>
+              <li>- Falta de seguridad</li>
+              <li>- Espacios poco organizados</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-[#d4a853] mb-2">Medicion</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>- Inspeccion solo al final</li>
+              <li>- Defectos detectados tarde</li>
+              <li>- Sin control de tiempos</li>
+              <li>- Criterio visual subjetivo</li>
+              <li>- No se registran datos del proceso</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -311,69 +347,175 @@
       </div>
       <p class="text-[#737373] text-sm mb-10 ml-11">Bill of Materials (Lista de materiales) y desglose de costos directos e indirectos.</p>
 
+      <!-- Inversion Inicial (CAPEX) -->
+      <div class="bg-[#242424] rounded-lg border border-[#333333] p-6 shadow-lg shadow-black/30 mb-8">
+        <h3 class="font-bold text-white mb-4">Inversion Inicial (CAPEX)</h3>
+        <table class="w-full text-xs border-collapse">
+          <thead>
+            <tr class="bg-black text-[#d4a853]">
+              <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+              <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Concepto</th>
+              <th class="text-right px-3 py-2 font-mono uppercase text-[10px]">Costo (MXN)</th>
+              <th class="text-right px-3 py-2 font-mono uppercase text-[10px]">Vida Util</th>
+              <th class="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Depreciacion/Mes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[#333333]">
+              <td class="px-3 py-2.5 text-[#999]">1</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5]">Troquel</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$800,000.00</td>
+              <td class="px-3 py-2.5 text-[#999] text-right">120 meses</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$6,666.67</td>
+            </tr>
+            <tr class="border-b border-[#333333]">
+              <td class="px-3 py-2.5 text-[#999]">2</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5]">Maquina Laser</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$8,000,000.00</td>
+              <td class="px-3 py-2.5 text-[#999] text-right">120 meses</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$66,666.67</td>
+            </tr>
+            <tr class="border-b border-[#333333]">
+              <td class="px-3 py-2.5 text-[#999]">3</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5]">Instalacion</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$40,000.00</td>
+              <td class="px-3 py-2.5 text-[#999] text-right">120 meses</td>
+              <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$333.33</td>
+            </tr>
+            <tr class="bg-[#1a1a1a]">
+              <td colspan="2" class="px-3 py-2.5 font-semibold text-[#999] text-right">TOTAL INVERSION:</td>
+              <td class="px-3 py-2.5 font-bold text-[#d4a853] text-right font-mono">$8,840,000.00</td>
+              <td class="px-3 py-2.5"></td>
+              <td class="px-3 py-2.5 font-bold text-[#d4a853] text-right font-mono">$73,666.67</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="grid grid-cols-2 gap-8">
         <!-- BOM -->
         <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-6 shadow-lg shadow-black/30">
-          <h3 class="font-bold text-white mb-4">Bill of Materials (BOM)</h3>
+          <h3 class="font-bold text-white mb-4">Bill of Materials (BOM) — Por Pieza</h3>
           <table class="w-full text-xs border-collapse">
             <thead>
               <tr class="bg-black text-[#d4a853]">
                 <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Componente</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Cantidad</th>
-                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Costo Unit.</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Material / Insumo</th>
+                <th class="text-right px-3 py-2 font-mono uppercase text-[10px]">Pzas</th>
+                <th class="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Costo</th>
               </tr>
             </thead>
             <tbody>
               <tr class="border-b border-[#333333]">
                 <td class="px-3 py-2.5 text-[#999]">1</td>
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Lamina Acero Inox. Cal. 18</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$1.44</td>
               </tr>
               <tr class="border-b border-[#333333]">
                 <td class="px-3 py-2.5 text-[#999]">2</td>
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Aro para dije</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$0.30</td>
               </tr>
               <tr class="border-b border-[#333333]">
                 <td class="px-3 py-2.5 text-[#999]">3</td>
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Cadena Acero Inoxidable</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$10.00</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">4</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Caja premium de carton</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$100.00</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">5</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Costal para dije</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$10.00</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">6</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Certificado de autenticidad</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$20.00</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#999]">7</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Pano de limpieza</td>
+                <td class="px-3 py-2.5 text-[#999] text-right">1</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">$1.00</td>
               </tr>
               <tr class="bg-[#1a1a1a]">
-                <td colspan="3" class="px-3 py-2.5 font-semibold text-[#999] text-right">Total BOM:</td>
-                <td class="px-3 py-2.5 font-bold text-[#d4a853]">[ Pendiente ]</td>
+                <td colspan="3" class="px-3 py-2.5 font-semibold text-[#999] text-right">TOTAL BOM:</td>
+                <td class="px-3 py-2.5 font-bold text-[#d4a853] text-right font-mono">$142.74</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Desglose de costos -->
+        <!-- OPEX Mensual -->
         <div class="bg-[#242424] rounded-lg p-6 border border-[#333333] shadow-lg shadow-black/30">
-          <h3 class="font-bold text-white mb-4">Desglose de Costos</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
-              <span class="text-sm text-[#999]">Materia prima directa</span>
-              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+          <h3 class="font-bold text-white mb-4">OPEX Mensual</h3>
+          <div class="space-y-0">
+            <!-- Mano de Obra Directa -->
+            <p class="text-[10px] font-bold text-[#d4a853] uppercase tracking-wider pt-2 pb-1">Mano de Obra Directa</p>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Tecnico de Laser</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$15,000</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
-              <span class="text-sm text-[#999]">Mano de obra directa</span>
-              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Tecnico de Troquelado</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$13,000</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
-              <span class="text-sm text-[#999]">Costos indirectos de fab.</span>
-              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Operador Rebabeo y Pulido</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$9,528</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-[#333333]">
-              <span class="text-sm text-[#999]">Maquinaria / herramienta</span>
-              <span class="text-sm text-[#666] italic">[ Pendiente ]</span>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Operador de Empaque</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$9,528</span>
             </div>
-            <div class="flex justify-between items-center py-3 bg-[#242424] border border-[#333] rounded-xl px-3 mt-2">
-              <span class="font-bold text-white">Costo total unitario</span>
-              <span class="font-bold text-[#d4a853]">[ Pendiente ]</span>
+            <!-- Mano de Obra Indirecta -->
+            <p class="text-[10px] font-bold text-[#d4a853] uppercase tracking-wider pt-3 pb-1">Mano de Obra Indirecta</p>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Ing. Produccion y Calidad</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$25,000</span>
+            </div>
+            <!-- Servicios -->
+            <p class="text-[10px] font-bold text-[#d4a853] uppercase tracking-wider pt-3 pb-1">Servicios</p>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Renta del Local / Taller</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$22,000</span>
+            </div>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Energia, Agua, Comunicaciones</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$8,300</span>
+            </div>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Mantenimiento + Seguridad</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$8,000</span>
+            </div>
+            <!-- Gastos Admin -->
+            <p class="text-[10px] font-bold text-[#d4a853] uppercase tracking-wider pt-3 pb-1">Gastos Administrativos</p>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Contabilidad, Publicidad, Seguro</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$15,300</span>
+            </div>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Capacitacion, Insumos, Residuos</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$5,500</span>
+            </div>
+            <div class="flex justify-between items-center py-1.5 border-b border-[#333333]">
+              <span class="text-xs text-[#999]">Gastos Bancarios + Imprevistos</span>
+              <span class="text-xs text-[#e5e5e5] font-mono">$4,200</span>
+            </div>
+            <!-- Total -->
+            <div class="flex justify-between items-center py-3 bg-[#1a1a1a] border border-[#333] rounded-xl px-3 mt-3">
+              <span class="font-bold text-white">TOTAL OPEX MENSUAL</span>
+              <span class="font-bold text-[#d4a853] font-mono">$135,356.00</span>
             </div>
           </div>
         </div>
