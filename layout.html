@@ -78,44 +78,44 @@
             <h3 class="font-bold text-[#e5e5e5] mb-4 text-sm">Leyenda</h3>
             <div class="space-y-3">
               <div class="flex items-center gap-3">
-                <div class="w-8 h-5 bg-blue-600 rounded"></div>
-                <span class="text-[#999] text-xs">Máquinas CNC</span>
+                <div class="w-8 h-5 bg-orange-500 rounded"></div>
+                <span class="text-[#999] text-xs">Estaciones de produccion</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-blue-500 rounded"></div>
+                <span class="text-[#999] text-xs">Estaciones automatizadas</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-8 h-5 bg-green-500 rounded"></div>
-                <span class="text-[#999] text-xs">Estación de ensamble</span>
+                <span class="text-[#999] text-xs">Area verde / seguridad</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-8 h-5 bg-amber-400 rounded"></div>
-                <span class="text-[#999] text-xs">Almacén MP</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-5 bg-red-400 rounded"></div>
-                <span class="text-[#999] text-xs">Almacén PT</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-5 bg-slate-300 rounded"></div>
-                <span class="text-[#999] text-xs">Área de tránsito</span>
+                <span class="text-[#999] text-xs">Almacen MP / PT</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-8 h-5 bg-purple-400 rounded"></div>
                 <span class="text-[#999] text-xs">Control de calidad</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-5 bg-red-400 rounded"></div>
+                <span class="text-[#999] text-xs">Lavado de ojos / emergencia</span>
               </div>
             </div>
             <div class="mt-6 pt-4 border-t border-[#333]">
               <h4 class="font-semibold text-[#737373] text-xs mb-3">Datos del lay-out</h4>
               <div class="space-y-2 text-xs">
                 <div class="flex justify-between">
-                  <span class="text-[#737373]">Área total</span>
-                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                  <span class="text-[#737373]">Area total</span>
+                  <span class="text-[#e5e5e5] font-semibold">400 m² (20x20 m)</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-[#737373]">Tipo de distribución</span>
-                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                  <span class="text-[#737373]">Tipo de distribucion</span>
+                  <span class="text-[#e5e5e5] font-semibold">Por proceso</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-[#737373]">Nº de estaciones</span>
-                  <span class="text-[#666] italic">[ Pendiente ]</span>
+                  <span class="text-[#737373]">N° de estaciones</span>
+                  <span class="text-[#e5e5e5] font-semibold">14</span>
                 </div>
               </div>
             </div>
@@ -123,26 +123,17 @@
 
           <!-- Plano 2D -->
           <div class="col-span-2">
-            <div class="placeholder-box rounded-lg border-2 border-dashed border-[#555] h-[480px] flex items-center justify-center">
-              <div class="text-center">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.2" class="mx-auto mb-4">
-                  <rect x="2" y="2" width="20" height="20" rx="2"/>
-                  <path d="M2 8h20M2 14h20M8 2v20M14 2v20"/>
-                  <rect x="4" y="4" width="3" height="3" fill="#3b82f6" rx="0.5"/>
-                  <rect x="9" y="4" width="3" height="3" fill="#3b82f6" rx="0.5"/>
-                </svg>
-                <p class="text-[#999] text-sm font-semibold">Insertar plano 2D del lay-out</p>
-                <p class="text-[#737373] text-xs mt-1">( imagen PNG/JPG, export de AutoCAD, SVG o PDF )</p>
-                <p class="text-[#555] text-xs mt-3 max-w-xs mx-auto">Puedes pegar aquí el archivo de imagen o incrustar un PDF de AutoCAD</p>
-              </div>
+            <img src="assets/layout-2d.jpeg" alt="Plano 2D - Vista superior del lay-out" class="w-full rounded-lg" />
+            <div class="mt-4">
+              <img src="assets/layout-esquema.jpeg" alt="Esquema de estaciones del lay-out" class="w-full rounded-lg" />
             </div>
           </div>
         </div>
 
         <!-- Descripción 2D -->
         <div class="bg-[#141c24] border-l-4 border-[#4b7399] rounded-r-lg p-6">
-          <h3 class="font-bold text-[#4b7399] text-sm mb-2">Descripción del Lay-out 2D</h3>
-          <p class="text-[#3d6080] text-xs leading-relaxed italic">[ Insertar descripción de la distribución de planta: tipo de layout (por proceso, por producto, celular, etc.), flujo de materiales, justificación de la disposición elegida, distancias recorridas, etc. ]</p>
+          <h3 class="font-bold text-[#4b7399] text-sm mb-2">Descripcion del Lay-out 2D</h3>
+          <p class="text-[#7fa8c9] text-xs leading-relaxed">Distribucion <strong>por proceso</strong> en planta de 400 m² (20 x 20 m). Estaciones: Corte Laser, Troquelado, Rebabeo, Pulido, Limpieza, Insercion de Aro (x3), Grabado Laser, Calidad, Empaque (x2), Almacen MP/PT. Transporte via AGVs con sensores 360° y bandas transportadoras. Piso epoxico antiderrapante, estaciones de lavado de ojos, senalizacion NOM-026 y equipo de seguridad en cada area. Cuarto de maquinas y area verde de emergencia integrados.</p>
         </div>
       </div>
 
@@ -151,56 +142,46 @@
         <div class="grid grid-cols-3 gap-6 mb-6">
           <!-- Info 3D -->
           <div class="col-span-1 bg-[#242424] rounded-lg border border-[#333] p-6">
-            <h3 class="font-bold text-[#e5e5e5] mb-4 text-sm">Información del Modelo 3D</h3>
+            <h3 class="font-bold text-[#e5e5e5] mb-4 text-sm">Informacion del Modelo 3D</h3>
             <div class="space-y-3 text-xs">
               <div class="flex justify-between border-b border-[#333] pb-2">
                 <span class="text-[#737373]">Software usado</span>
-                <span class="text-[#666] italic">[ Pendiente ]</span>
+                <span class="text-[#e5e5e5] font-semibold">SketchUp / Render</span>
               </div>
               <div class="flex justify-between border-b border-[#333] pb-2">
                 <span class="text-[#737373]">Escala</span>
-                <span class="text-[#666] italic">[ Pendiente ]</span>
+                <span class="text-[#e5e5e5] font-semibold">1:1</span>
               </div>
               <div class="flex justify-between border-b border-[#333] pb-2">
-                <span class="text-[#737373]">Área representada</span>
-                <span class="text-[#666] italic">[ Pendiente ]</span>
+                <span class="text-[#737373]">Area representada</span>
+                <span class="text-[#e5e5e5] font-semibold">400 m²</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-[#737373]">Versión</span>
-                <span class="text-[#666] italic">[ Pendiente ]</span>
+                <span class="text-[#737373]">Version</span>
+                <span class="text-[#e5e5e5] font-semibold">Final</span>
               </div>
             </div>
 
             <div class="mt-6 pt-4 border-t border-[#333]">
               <h4 class="font-semibold text-[#737373] text-xs mb-3">Vistas disponibles</h4>
               <div class="space-y-2">
-                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista isométrica</button>
-                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista superior</button>
-                <button class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999] hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Vista frontal</button>
+                <div class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#d4a853] text-[#d4a853]">Vista isometrica</div>
+                <div class="w-full text-left text-xs px-3 py-2 bg-[#1a1a1a] rounded-lg border border-[#333] text-[#999]">Vista lateral</div>
               </div>
             </div>
           </div>
 
           <!-- Render 3D -->
           <div class="col-span-2">
-            <div class="placeholder-box rounded-lg border-2 border-dashed border-[#555] h-[480px] flex items-center justify-center">
-              <div class="text-center">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.2" class="mx-auto mb-4">
-                  <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/>
-                  <path d="M12 12L3 7M12 12l9-5M12 12v10"/>
-                </svg>
-                <p class="text-[#999] text-sm font-semibold">Insertar modelo / render 3D del lay-out</p>
-                <p class="text-[#737373] text-xs mt-1">( render de SolidWorks, Fusion 360, SketchUp, imagen )</p>
-                <p class="text-[#555] text-xs mt-3 max-w-xs mx-auto">También puedes incrustar un visor 3D interactivo con iframe</p>
-              </div>
-            </div>
+            <img src="assets/layout-3d.jpeg" alt="Render 3D isometrico del lay-out" class="w-full rounded-lg mb-4" />
+            <img src="assets/layout-3d-lateral.jpeg" alt="Render 3D vista lateral del lay-out" class="w-full rounded-lg" />
           </div>
         </div>
 
         <!-- Descripción 3D -->
         <div class="bg-[#1c1424] border-l-4 border-[#7b4b99] rounded-r-lg p-6">
-          <h3 class="font-bold text-[#7b4b99] text-sm mb-2">Descripción del Modelo 3D</h3>
-          <p class="text-[#634080] text-xs leading-relaxed italic">[ Insertar descripción del modelo 3D: herramienta utilizada, perspectivas del área, elementos modelados, observaciones sobre ergonomía y seguridad visible en el modelo, etc. ]</p>
+          <h3 class="font-bold text-[#7b4b99] text-sm mb-2">Descripcion del Modelo 3D</h3>
+          <p class="text-[#9b6fbf] text-xs leading-relaxed">Render 3D de la planta de manufactura mostrando la distribucion fisica de todas las estaciones de trabajo, maquinaria, AGVs, bandas transportadoras y areas de seguridad. Se incluyen vista isometrica y vista lateral para apreciar alturas de equipos, iluminacion y flujo general del proceso productivo.</p>
         </div>
       </div>
 

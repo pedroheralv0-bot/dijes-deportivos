@@ -308,27 +308,13 @@
         </div>
 
         <div id="panel2d" class="p-8">
-          <div class="placeholder-box rounded-xl h-96 flex items-center justify-center">
-            <div class="text-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-3">
-                <rect x="2" y="2" width="20" height="20" rx="2"/><path d="M2 8h20M2 14h20M8 2v20M14 2v20"/>
-              </svg>
-              <p class="text-[#666] text-sm">Insertar lay-out 2D</p>
-              <p class="text-[#555] text-xs mt-1">( plano en imagen, AutoCAD export, SVG )</p>
-            </div>
-          </div>
+          <img src="assets/layout-2d.jpeg" alt="Lay-out 2D - Vista superior" class="w-full rounded-xl" />
+          <p class="text-[#999] text-xs mt-3 text-center">Planta de 400 m² (20x20 m) — Distribucion por proceso — 14 estaciones</p>
         </div>
 
         <div id="panel3d" class="p-8 hidden">
-          <div class="placeholder-box rounded-xl h-96 flex items-center justify-center">
-            <div class="text-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-3">
-                <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12L3 7M12 12l9-5M12 12v10"/>
-              </svg>
-              <p class="text-[#666] text-sm">Insertar lay-out 3D</p>
-              <p class="text-[#555] text-xs mt-1">( render, modelo 3D embebido, imagen )</p>
-            </div>
-          </div>
+          <img src="assets/layout-3d.jpeg" alt="Lay-out 3D - Render isometrico" class="w-full rounded-xl" />
+          <p class="text-[#999] text-xs mt-3 text-center">Render 3D isometrico de la planta de manufactura</p>
         </div>
       </div>
 
@@ -582,10 +568,14 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10H2A10 10 0 0 1 12 2z"/><rect x="2" y="12" width="20" height="4" rx="1"/></svg>
           </div>
           <h4 class="font-bold text-white mb-2">EPP Requerido</h4>
-          <ul class="text-[#666] text-xs space-y-1.5 italic">
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
+          <ul class="text-[#999] text-xs space-y-1.5">
+            <li>• Lentes de seguridad</li>
+            <li>• Guantes anticorte</li>
+            <li>• Proteccion auditiva</li>
+            <li>• Careta para laser</li>
+            <li>• Mandil de cuero</li>
+            <li>• Calzado industrial con casquillo</li>
+            <li>• Overol / bata industrial</li>
           </ul>
         </div>
         <!-- Normas -->
@@ -594,10 +584,13 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4b7399" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
           </div>
           <h4 class="font-bold text-white mb-2">Normas Aplicables</h4>
-          <ul class="text-[#666] text-xs space-y-1.5 italic">
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
+          <ul class="text-[#999] text-xs space-y-1.5">
+            <li>• <strong class="text-[#4b7399]">NOM-017</strong> — EPP</li>
+            <li>• <strong class="text-[#4b7399]">NOM-019</strong> — Comision de Seguridad</li>
+            <li>• <strong class="text-[#4b7399]">NOM-026</strong> — Senalizacion</li>
+            <li>• <strong class="text-[#4b7399]">NOM-002</strong> — Contra incendio</li>
+            <li>• <strong class="text-[#4b7399]">NOM-030</strong> — Diagnostico SST</li>
+            <li>• <strong class="text-[#4b7399]">NOM-036-1</strong> — Ergonomia</li>
           </ul>
         </div>
         <!-- Riesgos -->
@@ -605,21 +598,23 @@
           <div class="w-10 h-10 bg-[#241414] rounded-xl flex items-center justify-center mb-4">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
-          <h4 class="font-bold text-white mb-2">Riesgos Identificados</h4>
-          <ul class="text-[#666] text-xs space-y-1.5 italic">
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
-            <li>• [ Pendiente ]</li>
+          <h4 class="font-bold text-white mb-2">Riesgos Identificados (IPER)</h4>
+          <ul class="text-[#999] text-xs space-y-1.5">
+            <li>• <span class="text-red-400 font-semibold">Alto</span> — Atrapamiento en Robot ABB (NR 15)</li>
+            <li>• <span class="text-red-400 font-semibold">Alto</span> — Amputacion en Troquelado (NR 15)</li>
+            <li>• <span class="text-red-400 font-semibold">Alto</span> — Particulas en Rebabeo (NR 12)</li>
+            <li>• <span class="text-amber-400 font-semibold">Medio</span> — Incendio en Laser (NR 8)</li>
+            <li>• <span class="text-amber-400 font-semibold">Medio</span> — Colision AGVs (NR 6)</li>
+            <li>• <span class="text-amber-400 font-semibold">Medio</span> — Sobreesfuerzo en Empaque (NR 6)</li>
           </ul>
         </div>
       </div>
 
-      <!-- Área de imagen/diagrama de seguridad -->
+      <!-- Mapa de Riesgos -->
       <div class="mt-8 bg-[#242424] rounded-lg border border-[#333333] p-6 shadow-lg shadow-black/30">
-        <h3 class="font-bold text-white mb-4">Diagrama / Mapa de Riesgos</h3>
-        <div class="placeholder-box rounded-xl h-52 flex items-center justify-center">
-          <p class="text-[#666] text-sm italic">[ Insertar mapa de riesgos o imagen de señalamientos ]</p>
-        </div>
+        <h3 class="font-bold text-white mb-4">Mapa de Riesgos — Esquema de Estaciones</h3>
+        <img src="assets/layout-esquema.jpeg" alt="Mapa de riesgos - Esquema de estaciones" class="w-full rounded-xl" />
+        <p class="text-[#999] text-xs mt-3 text-center">Esquema de distribucion de estaciones con identificacion de areas de riesgo, senalizacion y EPP requerido por zona.</p>
       </div>
     </div>
   </section>
@@ -636,57 +631,92 @@
       <p class="text-[#737373] text-sm mb-10 ml-11">Evaluación de posturas, movimientos y condiciones de trabajo del operador.</p>
 
       <div class="grid grid-cols-2 gap-8">
-        <!-- Imagen / diagrama ergonómico -->
+        <!-- Evaluaciones ergonómicas -->
         <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-6 shadow-lg shadow-black/30">
-          <h3 class="font-bold text-white mb-4">Diagrama Ergonómico</h3>
-          <div class="placeholder-box rounded-xl h-64 flex items-center justify-center">
-            <div class="text-center">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" class="mx-auto mb-2">
-                <circle cx="12" cy="4" r="2"/><path d="M12 6v6l3 3m-6-3 3 3M9 9H6a1 1 0 0 0 0 2h3M15 9h3a1 1 0 0 1 0 2h-3M12 12v6l2 2m-4-2 2 2"/>
-              </svg>
-              <p class="text-[#666] text-xs">Insertar análisis ergonómico</p>
-              <p class="text-[#555] text-xs mt-1">( REBA, RULA, OWAS u otro )</p>
+          <h3 class="font-bold text-white mb-4">Evaluaciones Ergonomicas (NOM-036-1)</h3>
+          <div class="space-y-4">
+            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Tareas Repetitivas</h4>
+              <ul class="text-[#999] text-xs space-y-1">
+                <li>• Insercion de aro — movimientos repetitivos de manos/munecas</li>
+                <li>• Inspeccion de calidad — postura estatica prolongada</li>
+                <li>• Empaque — movimientos repetitivos con postura forzada</li>
+              </ul>
+            </div>
+            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Manejo Manual de Cargas</h4>
+              <ul class="text-[#999] text-xs space-y-1">
+                <li>• Empaquetado — levantamiento de cajas con producto terminado</li>
+                <li>• Almacen — acomodo de materia prima y producto final</li>
+                <li>• Materia prima — manipulacion de laminas de acero inoxidable</li>
+              </ul>
+            </div>
+            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Exposicion a Ruido</h4>
+              <ul class="text-[#999] text-xs space-y-1">
+                <li>• Troquelado — ruido de impacto >85 dB</li>
+                <li>• Rebabeo/Esmerilado — ruido continuo por herramienta rotativa</li>
+                <li>• Requiere estudio de ruido + proteccion auditiva obligatoria</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- Tabla de evaluación -->
+        <!-- Tabla de evaluación y conclusiones -->
         <div>
-          <h3 class="font-bold text-white mb-4">Resultados de Evaluación</h3>
+          <h3 class="font-bold text-white mb-4">Resultados de Evaluacion</h3>
           <table class="w-full text-xs border-collapse">
             <thead>
               <tr class="bg-black text-[#d4a853]">
-                <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">Parámetro</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Método</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Puntuación</th>
-                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Nivel de Riesgo</th>
+                <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">Area / Tarea</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Factor</th>
+                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Control</th>
+                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Nivel</th>
               </tr>
             </thead>
             <tbody>
               <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Insercion de aro</td>
+                <td class="px-3 py-2.5 text-[#999]">Repetitividad</td>
+                <td class="px-3 py-2.5 text-[#999]">Rotacion + pausas</td>
+                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
               </tr>
               <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Calidad</td>
+                <td class="px-3 py-2.5 text-[#999]">Postura estatica</td>
+                <td class="px-3 py-2.5 text-[#999]">Pausas activas</td>
+                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
               </tr>
               <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#666] italic">[ Pendiente ]</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
-                <td class="px-3 py-2.5 text-[#666] italic">—</td>
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Empaque</td>
+                <td class="px-3 py-2.5 text-[#999]">Carga manual</td>
+                <td class="px-3 py-2.5 text-[#999]">Limites de peso</td>
+                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Troquelado</td>
+                <td class="px-3 py-2.5 text-[#999]">Ruido >85 dB</td>
+                <td class="px-3 py-2.5 text-[#999]">Proteccion auditiva</td>
+                <td class="px-3 py-2.5 text-red-400 font-semibold">Alto</td>
+              </tr>
+              <tr class="border-b border-[#333333]">
+                <td class="px-3 py-2.5 text-[#e5e5e5]">Rebabeo</td>
+                <td class="px-3 py-2.5 text-[#999]">Ruido + vibracion</td>
+                <td class="px-3 py-2.5 text-[#999]">EPP + rotacion</td>
+                <td class="px-3 py-2.5 text-red-400 font-semibold">Alto</td>
               </tr>
             </tbody>
           </table>
           <div class="mt-6 space-y-3">
             <p class="text-sm font-semibold text-white">Conclusiones y Recomendaciones</p>
             <div class="bg-[#1a1a1a] rounded-xl p-4 border border-[#333]">
-              <p class="text-[#666] text-xs italic">[ Insertar conclusiones del análisis ergonómico: medidas correctivas, rediseño de estación de trabajo, etc. ]</p>
+              <ul class="text-[#999] text-xs space-y-1.5">
+                <li>• Implementar pausas activas cada 2 horas en estaciones de insercion, calidad y empaque</li>
+                <li>• Rotacion documentada de personal entre estaciones de alta repetitividad</li>
+                <li>• Realizar estudio de ruido en troquelado y rebabeo; si >85 dB, audiometrias periodicas</li>
+                <li>• Limitar carga manual a 25 kg y capacitar en tecnica segura de levantamiento</li>
+                <li>• Dotar de tapetes antifatiga en estaciones donde se trabaja de pie</li>
+              </ul>
             </div>
           </div>
         </div>
