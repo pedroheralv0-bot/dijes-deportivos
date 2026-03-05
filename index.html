@@ -44,11 +44,7 @@
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-[#d4a853] rounded-full flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-          </svg>
-        </div>
+        <img src="assets/logo.png" alt="Logo Dijes Deportivos" class="w-9 h-9 rounded-full object-cover" />
         <span class="text-white font-bold text-lg tracking-tight">Dijes <span class="text-[#d4a853]">Deportivos</span></span>
       </a>
       <!-- Nav links -->
@@ -80,7 +76,7 @@
       <a href="#layout"          class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Lay-out</a>
       <a href="#costos"          class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Costos y BOM</a>
       <a href="#seguridad"       class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Seguridad Industrial</a>
-      <a href="#ergonomia"       class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Ergonomía</a>
+      <a href="#ergonomia"       class="border border-[#555] text-[#999] text-xs px-4 py-2 rounded-full hover:border-[#d4a853] hover:text-[#d4a853] transition-colors">Ergonomia</a>
     </div>
   </section>
 
@@ -227,6 +223,84 @@
               <li>- Sin control de tiempos</li>
               <li>- Criterio visual subjetivo</li>
               <li>- No se registran datos del proceso</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ishikawa 2 — Después del Proyecto -->
+      <div class="bg-[#242424] rounded-lg border border-[#333333] overflow-hidden shadow-lg shadow-black/30 mt-10">
+        <div class="bg-[#0c1f11] border-b border-[#22c55e] px-6 py-4 flex items-center gap-3">
+          <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <h3 class="font-bold text-green-400 text-sm">Ishikawa 2 — Despues del Proyecto (Situacion mejorada)</h3>
+          <span class="ml-auto text-green-500 text-xs">Produccion continua de dijes deportivos con calidad uniforme</span>
+        </div>
+        <div class="p-6">
+          <img src="assets/ishikawa-2.png" alt="Diagrama Ishikawa 2 - Situacion Mejorada" class="w-full rounded-xl bg-white p-4" />
+          <p class="text-[#999] text-xs mt-4 text-center"><strong class="text-green-400">Resultado:</strong> mayor volumen + menor costo + calidad constante</p>
+        </div>
+        <!-- Resumen de las 6M mejoradas -->
+        <div class="px-6 pb-6 grid grid-cols-3 gap-4">
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Mano de Obra</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Operador supervisa el sistema</li>
+              <li>+ Menor esfuerzo fisico</li>
+              <li>+ Trabajo mas ergonomico</li>
+              <li>+ Menos errores humanos</li>
+              <li>+ Mayor motivacion</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Metodo</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Proceso definido digitalmente</li>
+              <li>+ Secuencia fija de operaciones</li>
+              <li>+ Eliminacion de reprocesos</li>
+              <li>+ Flujo continuo</li>
+              <li>+ Produccion planificada</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Maquinaria</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Equipos automatizados</li>
+              <li>+ Precision en geometrias complejas</li>
+              <li>+ Parametros programados</li>
+              <li>+ Produccion estable</li>
+              <li>+ Menos intervencion manual</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Materiales</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Corte limpio desde el inicio</li>
+              <li>+ Menor desperdicio</li>
+              <li>+ Acabado uniforme</li>
+              <li>+ Piezas listas para ensamble</li>
+              <li>+ Aprovechamiento del material</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Medio Ambiente</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Lay-out optimizado</li>
+              <li>+ Menos transporte interno</li>
+              <li>+ Iluminacion adecuada</li>
+              <li>+ Areas definidas</li>
+              <li>+ Seguridad industrial</li>
+            </ul>
+          </div>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
+            <h4 class="text-xs font-bold text-green-400 mb-2">Medicion</h4>
+            <ul class="text-[#999] text-xs space-y-1">
+              <li>+ Control durante el proceso</li>
+              <li>+ Registro de produccion</li>
+              <li>+ Parametros definidos</li>
+              <li>+ Deteccion temprana de fallas</li>
+              <li>+ Seguimiento de calidad</li>
             </ul>
           </div>
         </div>
@@ -616,8 +690,1142 @@
         <img src="assets/layout-esquema.jpeg" alt="Mapa de riesgos - Esquema de estaciones" class="w-full rounded-xl" />
         <p class="text-[#999] text-xs mt-3 text-center">Esquema de distribucion de estaciones con identificacion de areas de riesgo, senalizacion y EPP requerido por zona.</p>
       </div>
+
+      <!-- Fichas Técnicas de Seguridad -->
+      <div class="mt-12">
+        <h3 class="font-bold text-white mb-1">Fichas Técnicas de Seguridad</h3>
+        <p class="text-[#737373] text-xs mb-8">Controles de riesgo, EPP, señalización y procedimientos seguros por estación de trabajo.</p>
+
+        <div class="space-y-6">
+
+          <!-- Ficha 1: Área de Materia Prima -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Área de Materia Prima</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Columna izquierda -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Cortes por bordes afilados</li>
+                    <li>• Golpes por caída/deslizamiento de láminas</li>
+                    <li>• Sobreesfuerzo por manipulación manual</li>
+                    <li>• Atrapamiento leve entre láminas/racks</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Racks anclados y en buen estado</li>
+                    <li>• Separadores/topes antideslizamiento</li>
+                    <li>• Piso antiderrapante con delimitación del área</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Capacitación en manejo manual y técnicas de levantamiento</li>
+                    <li>• Límite de carga visible en cada rack</li>
+                    <li>• Implementación de metodología 5S y pasillos libres de obstáculos</li>
+                    <li>• Prohibido manipular material sin guantes de protección</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guantes anticorte</li>
+                    <li>• Lentes de seguridad</li>
+                    <li>• Botas de seguridad con casquillo</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Columna derecha -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Material cortante (amarillo)</li>
+                    <li>• Uso obligatorio guantes y lentes</li>
+                    <li>• Delimitación del área de almacenamiento</li>
+                    <li>• Ruta peatonal señalizada</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Verificar que el área de trabajo se encuentre despejada</li>
+                    <li>Colocar todo el EPP antes de manipular material</li>
+                    <li>Manipular las láminas utilizando técnicas seguras de levantamiento</li>
+                    <li>No sobrecargar los racks de almacenamiento</li>
+                    <li>Reportar material dañado</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 2: Troquelado — 4 Basic Punchers -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Troquelado — 4 Basic Punchers</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/10 text-red-400">Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Columna izquierda -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Amputación/atrapamiento</li>
+                    <li>• Compresión/aplastamiento</li>
+                    <li>• Proyección de fragmentos</li>
+                    <li>• Ruido</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guardas físicas/dispositivos de seguridad</li>
+                    <li>• Paro de emergencia</li>
+                    <li>• Delimitación de perímetro</li>
+                    <li>• Cabina cerrada + interlocks</li>
+                    <li>• Ventilación/extracción (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Capacitación obligatoria</li>
+                    <li>• Prohibido retirar guardas</li>
+                    <li>• LOTO en ajuste/atascos/mantenimiento</li>
+                    <li>• Checklist inicio de turno</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guantes de cuero</li>
+                    <li>• Protección auditiva</li>
+                    <li>• Lentes de seguridad</li>
+                    <li>• Calzado con casquillo</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Columna derecha -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo de amputación/aplastamiento</li>
+                    <li>• Uso obligatorio protección auditiva</li>
+                    <li>• No retirar guardas</li>
+                    <li>• Paro de emergencia</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Verificar guardas y paro de emergencia</li>
+                    <li>Manos fuera de zona de riesgo</li>
+                    <li>Parar ante anomalía</li>
+                    <li>Para atasco: paro + LOTO</li>
+                    <li>Reinicio solo autorizado</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 3: Robot ABB IRB 1300 -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Robot ABB IRB 1300</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/10 text-red-400">Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Columna izquierda -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Atrapamiento/aplastamiento</li>
+                    <li>• Golpe por movimiento automático</li>
+                    <li>• Energía residual (eléctrica/neumática)</li>
+                    <li>• Arranque inesperado</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Celda con malla y delimitación</li>
+                    <li>• Sensores de presencia + interlocks</li>
+                    <li>• Paro de emergencia accesible</li>
+                    <li>• Luz roja en operación</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Operador certificado</li>
+                    <li>• Acceso restringido</li>
+                    <li>• LOTO obligatorio en mantenimiento/atascos</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Lentes de seguridad</li>
+                    <li>• Calzado con casquillo</li>
+                    <li>• Chaleco reflejante (si hay AGVs cerca)</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Columna derecha -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Acceso restringido</li>
+                    <li>• Robot en movimiento</li>
+                    <li>• Paro de emergencia</li>
+                    <li>• Delimitación zona robot</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Operar solo desde HMI autorizado</li>
+                    <li>No ingresar con robot energizado</li>
+                    <li>Aplicar LOTO para intervención</li>
+                    <li>Verificar energía cero</li>
+                    <li>Liberación solo autorizada</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 4: Estación de Emergencia -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Estación de Emergencia</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-purple-500/40 bg-purple-500/10 text-purple-400">Control crítico</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Columna izquierda -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Uso incorrecto</li>
+                    <li>• No disponibilidad por obstrucción</li>
+                    <li>• Respuesta tardía ante salpicaduras/partículas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Instalación fija operativa</li>
+                    <li>• Acceso libre y drenaje</li>
+                    <li>• Iluminación</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Inspección semanal documentada</li>
+                    <li>• Capacitación a todo el personal</li>
+                    <li>• Prohibido obstruir</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Equipo de emergencia; complementa EPP ocular</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Columna derecha -->
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Lavaojos</li>
+                    <li>• No obstruir</li>
+                    <li>• Ruta de acceso marcada</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Activar flujo inmediato</li>
+                    <li>Enjuagar ≥ 15 min</li>
+                    <li>Retirar lentes de contacto si aplica</li>
+                    <li>Reportar incidente + atención médica</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 5: Corte Láser (HBS Laser Machine) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Corte Láser — HBS Laser Machine</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/10 text-red-400">Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Bordes cortantes/rebabas</li>
+                    <li>• Energía térmica/quemadura</li>
+                    <li>• Incendio</li>
+                    <li>• Riesgo eléctrico</li>
+                    <li>• Atrapamiento en partes móviles internas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Cabina cerrada + interlocks</li>
+                    <li>• Ventilación/extracción (si aplica)</li>
+                    <li>• Extintor ABC a &lt; 15 m</li>
+                    <li>• Paro de emergencia</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Operador autorizado</li>
+                    <li>• Prohibido operar con puertas abiertas/anular interlocks</li>
+                    <li>• Limpieza de residuos metálicos</li>
+                    <li>• Área libre de combustibles</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guantes anticorte</li>
+                    <li>• Lentes de seguridad</li>
+                    <li>• Botas con casquillo</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo de corte</li>
+                    <li>• Riesgo eléctrico</li>
+                    <li>• Extintor + No obstruir</li>
+                    <li>• Acceso restringido</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Verificar interlocks</li>
+                    <li>No abrir durante operación</li>
+                    <li>Inspeccionar material previo</li>
+                    <li>Retirar piezas con guantes</li>
+                    <li>Registrar y limpiar</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 6: Limpieza Ultrasónica -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Limpieza Ultrasónica</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Contacto químico/irritación</li>
+                    <li>• Derrames</li>
+                    <li>• Piso mojado/resbalón</li>
+                    <li>• Riesgo eléctrico por humedad</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Tierra física/protecciones</li>
+                    <li>• Contención secundaria</li>
+                    <li>• Ventilación</li>
+                    <li>• Kit de derrames</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• SDS disponibles</li>
+                    <li>• Etiquetado SGA</li>
+                    <li>• Procedimiento de derrames</li>
+                    <li>• Capacitación específica</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guantes químicos</li>
+                    <li>• Goggles/lentes</li>
+                    <li>• Mandil</li>
+                    <li>• Calzado antiderrapante</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo químico</li>
+                    <li>• Piso mojado</li>
+                    <li>• Uso obligatorio guantes y lentes</li>
+                    <li>• SDS disponibles</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Verificar SDS y concentración</li>
+                    <li>Colocar EPP</li>
+                    <li>No introducir manos durante operación</li>
+                    <li>Limpiar derrames inmediato</li>
+                    <li>Registrar consumo/hallazgos</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 7: Calidad 2 -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Calidad 2</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-sky-500/40 bg-sky-500/10 text-sky-400">Bajo-Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Fatiga visual</li>
+                    <li>• Postura prolongada</li>
+                    <li>• Cortes menores por aristas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Iluminación adecuada</li>
+                    <li>• Mesa/silla ergonómica</li>
+                    <li>• Ayudas visuales si aplica</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Pausas activas</li>
+                    <li>• Rotación de tareas</li>
+                    <li>• Orden y limpieza</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Lentes</li>
+                    <li>• Guantes ligeros (si aplica)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Uso obligatorio lentes</li>
+                    <li>• Ergonomía recomendada</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Verificar estación</li>
+                    <li>Inspeccionar</li>
+                    <li>Separar no conformes</li>
+                    <li>Registrar resultados</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 8: Inserción de Aro (3 estaciones) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Inserción de Aro — 3 estaciones</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Movimientos repetitivos</li>
+                    <li>• Cortes pequeños</li>
+                    <li>• Pinzamientos leves</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Mesas a altura ergonómica</li>
+                    <li>• Útiles para reducir fuerza</li>
+                    <li>• Tapete antifatiga (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Rotación de tareas</li>
+                    <li>• Pausas activas</li>
+                    <li>• Ritmo seguro</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Lentes</li>
+                    <li>• Guantes ligeros (si aplica)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Uso obligatorio lentes</li>
+                    <li>• Pausas activas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Preparar herramienta/bandejas</li>
+                    <li>Ensamble sin forzar</li>
+                    <li>Pausas programadas</li>
+                    <li>Reportar dolor/entumecimiento</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 9: Banda Transportadora -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Banda Transportadora</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Atrapamiento en rodillos</li>
+                    <li>• Enganche de ropa</li>
+                    <li>• Golpe por intervención en atasco</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guardas en puntos de pellizco</li>
+                    <li>• Cable de paro</li>
+                    <li>• Indicador visual de operación</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Prohibido introducir manos</li>
+                    <li>• LOTO para limpieza/atascos/mantenimiento</li>
+                    <li>• Capacitación de operación</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Lentes</li>
+                    <li>• Guantes según manipulación</li>
+                    <li>• Calzado de seguridad</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Partes móviles</li>
+                    <li>• No introducir manos</li>
+                    <li>• Paro de emergencia</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Mantener manos fuera</li>
+                    <li>Paro ante anomalía</li>
+                    <li>Para atasco: paro + LOTO</li>
+                    <li>Reinicio autorizado</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 10: Empaquetado (2 áreas) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Empaquetado — 2 áreas</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Sobreesfuerzo</li>
+                    <li>• Cortes leves (cutter)</li>
+                    <li>• Postura repetitiva</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Mesa a altura ergonómica</li>
+                    <li>• Dispensador de cinta</li>
+                    <li>• Cutter de seguridad</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Capacitación de levantamiento</li>
+                    <li>• Límites de peso por caja</li>
+                    <li>• Rotación y pausas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guantes ligeros</li>
+                    <li>• Calzado antiderrapante</li>
+                    <li>• Lentes si aplica</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo de corte</li>
+                    <li>• Ergonomía</li>
+                    <li>• Uso de EPP según tarea</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Preparar estación</li>
+                    <li>Corte seguro</li>
+                    <li>Levantamiento con técnica</li>
+                    <li>Orden al cierre</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 11: Almacén (4 racks/estructuras) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Almacén — 4 racks/estructuras</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400">Medio-Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Caída de objetos</li>
+                    <li>• Golpes por maniobra</li>
+                    <li>• Sobrecarga/colapso de rack</li>
+                    <li>• Interacción con AGVs</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Racks anclados y nivelados</li>
+                    <li>• Carga máxima por nivel visible</li>
+                    <li>• Protectores de esquina/topes</li>
+                    <li>• Marcaje de pasillos</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Inspección mensual de racks (formato)</li>
+                    <li>• Prohibido subir a racks sin equipo autorizado</li>
+                    <li>• Orden por ubicaciones</li>
+                    <li>• Reporte inmediato de daños</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Botas con casquillo</li>
+                    <li>• Chaleco reflejante</li>
+                    <li>• Casco (si hay riesgo real de caída de objetos o maniobra arriba)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo caída de objetos</li>
+                    <li>• Uso obligatorio chaleco/casco si aplica</li>
+                    <li>• Marcaje de pasillos y zonas de carga</li>
+                    <li>• Identificación de carga máxima</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Mantener pasillos libres</li>
+                    <li>No sobrepasar cargas</li>
+                    <li>Reportar rack dañado</li>
+                    <li>Respetar cruces con AGVs</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 12: AGVs (vehículos autónomos) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">AGVs — Vehículos Autónomos</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Colisión con persona/objeto</li>
+                    <li>• Atrapamiento contra racks/pared</li>
+                    <li>• Zona ciega/cruce</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Sensores 360° y paro automático</li>
+                    <li>• Velocidad limitada</li>
+                    <li>• Alarmas visuales/sonora (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Capacitación de convivencia con AGVs</li>
+                    <li>• Rutas definidas y señalizadas</li>
+                    <li>• Prohibido obstruir ruta AGV</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Chaleco reflejante (cruces)</li>
+                    <li>• Calzado de seguridad</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Vehículo autónomo</li>
+                    <li>• Ruta AGV amarilla</li>
+                    <li>• Cruce peatonal</li>
+                    <li>• No obstruir ruta AGV</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Respetar rutas</li>
+                    <li>Cruzar solo por zonas señalizadas</li>
+                    <li>No invadir ruta</li>
+                    <li>Reportar fallas/obstáculos</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 13: Área Verde / Área Común -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Área Verde / Área Común</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-green-500/40 bg-green-500/10 text-green-400">Bajo</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Tropiezos/caídas</li>
+                    <li>• Congestión en evacuación</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Acceso restringido</li>
+                    <li>• Ventilación</li>
+                    <li>• Bloqueo y señalización en tableros</li>
+                    <li>• Dispositivos de alivio (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• LOTO obligatorio</li>
+                    <li>• Permisos de trabajo</li>
+                    <li>• Mantenimiento programado con bitácora</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Según política general de planta</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Zona segura</li>
+                    <li>• Ruta de evacuación</li>
+                    <li>• Punto de reunión (si aplica)</li>
+                    <li>• Botiquín (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Mantener área libre</li>
+                    <li>No obstruir rutas</li>
+                    <li>Reportar derrames</li>
+                    <li>Respetar señalización</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 14: Pulido (2 Belt Polishing - 3 bandas) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Pulido — 2 Belt Polishing, 3 bandas</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400">Medio-Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Atrapamiento en bandas</li>
+                    <li>• Polvo fino metálico</li>
+                    <li>• Ruido</li>
+                    <li>• Proyección de partículas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Guardas laterales</li>
+                    <li>• Paro inmediato accesible</li>
+                    <li>• Extracción de polvo</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Prohibido ropa suelta/guantes sueltos</li>
+                    <li>• Limpieza frecuente</li>
+                    <li>• LOTO en intervención</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Careta + lentes</li>
+                    <li>• Respirador</li>
+                    <li>• Protección auditiva</li>
+                    <li>• Guantes adecuados (sin holgura)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Banda en movimiento/atrapamiento</li>
+                    <li>• Uso obligatorio respirador</li>
+                    <li>• Uso obligatorio protección auditiva</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Revisar guardas y paro</li>
+                    <li>Operar sin forzar</li>
+                    <li>Manos fuera de pellizcos</li>
+                    <li>LOTO si hay atasco</li>
+                    <li>Orden al final</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 15: Rebabeo (2 Bench Grinders) -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Rebabeo — 2 Bench Grinders</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/10 text-red-400">Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Proyección de partículas</li>
+                    <li>• Contacto con disco (corte/abrasión)</li>
+                    <li>• Ruido alto</li>
+                    <li>• Polvo metálico</li>
+                    <li>• Chispas/ignición</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Pantalla protectora + guarda</li>
+                    <li>• Soporte de pieza ajustado</li>
+                    <li>• Extracción de polvo</li>
+                    <li>• Lavaojos &lt; 10 m</li>
+                    <li>• Extintor accesible</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Inspección diaria del disco</li>
+                    <li>• No usar disco dañado</li>
+                    <li>• LOTO para cambio de disco</li>
+                    <li>• Limpieza programada de polvo</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Careta facial + lentes</li>
+                    <li>• Protección auditiva</li>
+                    <li>• Respirador para polvo metálico</li>
+                    <li>• Guantes según operación</li>
+                    <li>• Botas con casquillo</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo por partículas</li>
+                    <li>• Uso obligatorio careta/lentes</li>
+                    <li>• Lavaojos</li>
+                    <li>• Extintor + No obstruir</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Colocar EPP</li>
+                    <li>Verificar disco/guardas</li>
+                    <li>Sujetar pieza firme</li>
+                    <li>Parar ante vibración</li>
+                    <li>Limpieza y orden al finalizar</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 16: HMI y Panel de Control -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">HMI y Panel de Control</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400">Medio (Alto si tablero abierto)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Operación no autorizada/arranque inesperado</li>
+                    <li>• Error humano</li>
+                    <li>• Riesgo eléctrico si gabinete abierto</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Gabinete cerrado con llave</li>
+                    <li>• Paro de emergencia accesible</li>
+                    <li>• Señalización de alta tensión</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Operador autorizado</li>
+                    <li>• Prohibido abrir gabinete sin autorización</li>
+                    <li>• LOTO en intervención</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Operación: lentes y calzado</li>
+                    <li>• Intervención: guantes dieléctricos + careta dieléctrica (según tarea)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Riesgo eléctrico</li>
+                    <li>• Acceso restringido</li>
+                    <li>• Paro de emergencia</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Operar desde HMI autorizado</li>
+                    <li>No abrir gabinete sin autorización</li>
+                    <li>Aplicar LOTO en intervención</li>
+                    <li>Registrar cambios</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha 17: Cuarto de Máquinas -->
+          <div class="bg-[#242424] rounded-lg border border-[#333] shadow-lg shadow-black/30 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <h4 class="font-bold text-white text-sm">Cuarto de Máquinas</h4>
+              <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/10 text-red-400">Alto</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-amber-400 mb-2">Riesgos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Alto voltaje</li>
+                    <li>• Presión neumática/energía almacenada</li>
+                    <li>• Ruido</li>
+                    <li>• Partes calientes/móviles</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles de Ingeniería</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Acceso restringido</li>
+                    <li>• Ventilación</li>
+                    <li>• Bloqueo y señalización en tableros</li>
+                    <li>• Dispositivos de alivio (si aplica)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2">Controles Administrativos</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• LOTO obligatorio</li>
+                    <li>• Permisos de trabajo</li>
+                    <li>• Mantenimiento programado con bitácora</li>
+                    <li>• Control de contratistas</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-green-400 mb-2">EPP</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Protección auditiva</li>
+                    <li>• Lentes</li>
+                    <li>• Calzado de seguridad</li>
+                    <li>• Guantes dieléctricos (cuando aplique)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-yellow-400 mb-2">Señalización</p>
+                  <ul class="text-[#999] text-xs space-y-1">
+                    <li>• Alto voltaje</li>
+                    <li>• Acceso restringido</li>
+                    <li>• Equipo a presión/aire comprimido</li>
+                    <li>• Uso obligatorio protección auditiva</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Procedimiento Seguro de Operación</p>
+                  <ol class="text-[#999] text-xs space-y-1 list-decimal list-inside">
+                    <li>Acceso solo autorizado</li>
+                    <li>Aplicar LOTO</li>
+                    <li>Verificar energía/presión cero</li>
+                    <li>Registrar mantenimiento y pruebas</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <!-- ══════════════════════════════════════════
+       SECCIÓN 7 – ANÁLISIS ERGONÓMICO
+  ══════════════════════════════════════════ -->
 
   <!-- ══════════════════════════════════════════
        SECCIÓN 7 – ANÁLISIS ERGONÓMICO
@@ -626,100 +1834,16 @@
     <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-2">
         <span class="w-8 h-8 bg-[#d4a853] rounded flex items-center justify-center text-black font-bold text-sm font-mono">07</span>
-        <h2 class="text-2xl font-extrabold text-white">Análisis Ergonómico</h2>
+        <h2 class="text-2xl font-extrabold text-white">Analisis Ergonomico</h2>
       </div>
-      <p class="text-[#737373] text-sm mb-10 ml-11">Evaluación de posturas, movimientos y condiciones de trabajo del operador.</p>
+      <p class="text-[#737373] text-sm mb-10 ml-11">Evaluacion de posturas, movimientos y condiciones de trabajo del operador.</p>
 
-      <div class="grid grid-cols-2 gap-8">
-        <!-- Evaluaciones ergonómicas -->
-        <div class="section-card bg-[#242424] border border-[#333333] rounded-lg p-6 shadow-lg shadow-black/30">
-          <h3 class="font-bold text-white mb-4">Evaluaciones Ergonomicas (NOM-036-1)</h3>
-          <div class="space-y-4">
-            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
-              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Tareas Repetitivas</h4>
-              <ul class="text-[#999] text-xs space-y-1">
-                <li>• Insercion de aro — movimientos repetitivos de manos/munecas</li>
-                <li>• Inspeccion de calidad — postura estatica prolongada</li>
-                <li>• Empaque — movimientos repetitivos con postura forzada</li>
-              </ul>
-            </div>
-            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
-              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Manejo Manual de Cargas</h4>
-              <ul class="text-[#999] text-xs space-y-1">
-                <li>• Empaquetado — levantamiento de cajas con producto terminado</li>
-                <li>• Almacen — acomodo de materia prima y producto final</li>
-                <li>• Materia prima — manipulacion de laminas de acero inoxidable</li>
-              </ul>
-            </div>
-            <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#333]">
-              <h4 class="text-xs font-bold text-[#d4a853] mb-2">Exposicion a Ruido</h4>
-              <ul class="text-[#999] text-xs space-y-1">
-                <li>• Troquelado — ruido de impacto >85 dB</li>
-                <li>• Rebabeo/Esmerilado — ruido continuo por herramienta rotativa</li>
-                <li>• Requiere estudio de ruido + proteccion auditiva obligatoria</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tabla de evaluación y conclusiones -->
-        <div>
-          <h3 class="font-bold text-white mb-4">Resultados de Evaluacion</h3>
-          <table class="w-full text-xs border-collapse">
-            <thead>
-              <tr class="bg-black text-[#d4a853]">
-                <th class="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">Area / Tarea</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Factor</th>
-                <th class="text-left px-3 py-2 font-mono uppercase text-[10px]">Control</th>
-                <th class="text-left px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Nivel</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#e5e5e5]">Insercion de aro</td>
-                <td class="px-3 py-2.5 text-[#999]">Repetitividad</td>
-                <td class="px-3 py-2.5 text-[#999]">Rotacion + pausas</td>
-                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
-              </tr>
-              <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#e5e5e5]">Calidad</td>
-                <td class="px-3 py-2.5 text-[#999]">Postura estatica</td>
-                <td class="px-3 py-2.5 text-[#999]">Pausas activas</td>
-                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
-              </tr>
-              <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#e5e5e5]">Empaque</td>
-                <td class="px-3 py-2.5 text-[#999]">Carga manual</td>
-                <td class="px-3 py-2.5 text-[#999]">Limites de peso</td>
-                <td class="px-3 py-2.5 text-amber-400 font-semibold">Medio</td>
-              </tr>
-              <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#e5e5e5]">Troquelado</td>
-                <td class="px-3 py-2.5 text-[#999]">Ruido >85 dB</td>
-                <td class="px-3 py-2.5 text-[#999]">Proteccion auditiva</td>
-                <td class="px-3 py-2.5 text-red-400 font-semibold">Alto</td>
-              </tr>
-              <tr class="border-b border-[#333333]">
-                <td class="px-3 py-2.5 text-[#e5e5e5]">Rebabeo</td>
-                <td class="px-3 py-2.5 text-[#999]">Ruido + vibracion</td>
-                <td class="px-3 py-2.5 text-[#999]">EPP + rotacion</td>
-                <td class="px-3 py-2.5 text-red-400 font-semibold">Alto</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="mt-6 space-y-3">
-            <p class="text-sm font-semibold text-white">Conclusiones y Recomendaciones</p>
-            <div class="bg-[#1a1a1a] rounded-xl p-4 border border-[#333]">
-              <ul class="text-[#999] text-xs space-y-1.5">
-                <li>• Implementar pausas activas cada 2 horas en estaciones de insercion, calidad y empaque</li>
-                <li>• Rotacion documentada de personal entre estaciones de alta repetitividad</li>
-                <li>• Realizar estudio de ruido en troquelado y rebabeo; si >85 dB, audiometrias periodicas</li>
-                <li>• Limitar carga manual a 25 kg y capacitar en tecnica segura de levantamiento</li>
-                <li>• Dotar de tapetes antifatiga en estaciones donde se trabaja de pie</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="bg-[#242424] rounded-lg border border-[#333333] p-12 text-center shadow-lg shadow-black/30">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="1.5" class="mx-auto mb-4">
+          <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+        </svg>
+        <h3 class="text-white text-lg font-bold mb-2">Proximamente</h3>
+        <p class="text-[#737373] text-sm">Contenido en desarrollo. Esta seccion se actualizara con el analisis ergonomico completo.</p>
       </div>
     </div>
   </section>
