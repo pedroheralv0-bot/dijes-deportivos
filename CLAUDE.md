@@ -2,63 +2,77 @@
 
 ## Descripción del Proyecto
 
-Sitio web estático para "Dijes Deportivos", publicado via GitHub Pages.
+Sitio web para "Dijes Deportivos", construido con **Next.js 16 + React + TypeScript + Tailwind CSS v4 + shadcn/ui**, desplegado via GitHub Pages.
 
 - **URL del sitio**: https://pedroheralv0-bot.github.io/dijes-deportivos/
 - **Repositorio**: `pedroheralv0-bot/dijes-deportivos`
-- **Deploy**: Automático al hacer push a `main` — GitHub Pages se actualiza en 1-2 minutos.
+- **Deploy**: Push a `main` → GitHub Actions (build + deploy)
+
+## Stack Técnico
+
+- **Framework**: Next.js 16 (App Router, static export)
+- **UI**: shadcn/ui + Aceternity UI (ContainerScroll, FeaturesSectionWithHoverEffects)
+- **Styling**: Tailwind CSS v4, CSS variables para dark theme
+- **Animations**: framer-motion
+- **Icons**: @tabler/icons-react
+- **Fonts**: Inter + JetBrains Mono (next/font/google)
 
 ## Estructura del Proyecto
 
 ```
 dijes-deportivos/
-├── index.html       # Página principal (incluye diagrama Ishikawa)
-├── producto.html    # Página del producto (certificados, ficha técnica)
-├── about.html       # Página "Acerca de"
-├── layout.html      # Layout/plantilla base
-├── glosario.html    # Glosario de términos
-└── assets/          # Imágenes y recursos estáticos
-    ├── logo.png
-    ├── cert-a001.png … cert-a008.png  # Certificados
-    ├── ficha-champ.png                # Ficha técnica del dije
-    └── ishikawa-2.png                 # Diagrama causa-efecto
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx          # Root layout (Navbar + Footer)
+│   │   ├── page.tsx            # Index (hero + 7 secciones)
+│   │   ├── globals.css         # Theme + CSS variables
+│   │   ├── producto/page.tsx   # Catálogo de 8 dijes
+│   │   ├── lay-out/page.tsx    # Layout de planta (2D/3D tabs)
+│   │   ├── glosario/page.tsx   # Glosario con búsqueda
+│   │   └── about/page.tsx      # Equipo + organigrama
+│   ├── components/
+│   │   ├── layout/             # Navbar, Footer, PageHeader, SectionHeader
+│   │   └── ui/                 # shadcn + Aceternity components
+│   ├── data/                   # Contenido como TypeScript data files
+│   │   ├── products.ts         # 8 dijes
+│   │   ├── team.ts             # 8 miembros
+│   │   ├── costs.ts            # CAPEX, BOM, OPEX
+│   │   ├── safety-sheets.ts    # 17 fichas de seguridad
+│   │   └── glossary.ts         # 8 términos
+│   └── lib/utils.ts            # cn(), getAssetPath()
+├── public/
+│   ├── assets/                 # Imágenes (logo, dijes, certificados, layouts)
+│   └── .nojekyll
+├── next.config.ts              # output: export, basePath: /dijes-deportivos
+└── .github/workflows/deploy.yml
 ```
 
-## Workflow de Deploy
+## Notas Técnicas
 
-1. Editar archivos HTML o agregar assets en `/assets/`
-2. Hacer commit y push a `main`
-3. GitHub Pages actualiza el sitio automáticamente en ~1-2 minutos
+- **basePath**: `/dijes-deportivos` — usar `getAssetPath()` para imágenes
+- **Static Export**: `output: 'export'` en next.config.ts
+- **Ruta `/lay-out`**: Evita conflicto con `layout.tsx` reservado en Next.js
+- **Client Components**: Navbar, Glosario, Lay-out, Index (ContainerScroll necesita "use client")
+- **Backup**: Branch `backup/static-html` contiene el HTML original
 
-No hay build step, bundler, ni servidor backend — todo es HTML/CSS/JS estático.
+## Comandos
 
----
+```bash
+npm run dev    # Dev server local
+npm run build  # Build estático → out/
+```
+
+## Design System (colores)
+
+- `gold / accent`: #d4a853
+- `dark`: #0a0a0a
+- `body`: #1a1a1a
+- `card-dark`: #242424
+- `border-dark`: #333333
 
 ## Workflow Orchestration
 
-1. **Plan Mode Default** — Para cualquier tarea no trivial (3+ pasos), usar plan mode primero. Si algo sale mal durante la implementación, replantear desde plan mode.
-
-2. **Subagent Strategy** — Usar subagentes para mantener el contexto limpio y paralelizar análisis independientes. No saturar el contexto principal con operaciones de exploración.
-
-3. **Self-Improvement Loop** — Después de cada corrección del usuario, actualizar `tasks/lessons.md` con el patrón aprendido para no repetir el mismo error.
-
-4. **Verification Before Done** — Nunca marcar una tarea como completa sin verificar que funciona. Para este proyecto: revisar que los cambios en HTML se ven correctos y que los assets existen en `/assets/` antes de hacer push.
-
-5. **Demand Elegance** — Para cambios no triviales, preguntarse: "¿Hay una forma más simple de hacer esto?" antes de implementar.
-
-6. **Autonomous Bug Fixing** — Encontrar y corregir la causa raíz de los bugs sin pedir explicaciones innecesarias. Evitar soluciones temporales (workarounds).
-
-## Task Management
-
-1. **Plan First** — Escribir el plan en `tasks/todo.md` con ítems checkeables antes de implementar.
-2. **Verify Plan** — Revisar el plan antes de empezar.
-3. **Track Progress** — Marcar ítems como completados conforme avanzas.
-4. **Explain Changes** — Resumen de alto nivel en cada paso significativo.
-5. **Document Results** — Agregar sección de revisión a `tasks/todo.md` al terminar.
-6. **Capture Lessons** — Actualizar `tasks/lessons.md` después de correcciones del usuario.
-
-## Core Principles
-
-- **Simplicity First** — Hacer cada cambio lo más simple posible. Impacto mínimo en el código existente.
-- **No Laziness** — Encontrar causas raíz. Sin soluciones temporales. Estándares de senior developer.
-- **Minimal Impact** — Los cambios solo deben tocar lo estrictamente necesario. Evitar introducir bugs al arreglar otros.
+1. **Plan Mode Default** — Para cualquier tarea no trivial (3+ pasos), usar plan mode primero.
+2. **Verification Before Done** — Verificar con `npm run build` antes de marcar como completo.
+3. **Demand Elegance** — Preguntarse: "¿Hay una forma más simple de hacer esto?"
+4. **Autonomous Bug Fixing** — Encontrar y corregir la causa raíz sin workarounds.
