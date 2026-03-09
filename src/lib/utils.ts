@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getAssetPath(path: string) {
-  return `/assets/${path}`;
+  return `${getBasePath()}/assets/${path}`;
 }
 
 export function getBasePath() {
