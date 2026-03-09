@@ -6,7 +6,7 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { SectionHeader } from "@/components/layout/section-header";
 import { FeaturesSectionWithHoverEffects } from "@/components/ui/features-section";
 import { getAssetPath } from "@/lib/utils";
-import { capex, capexTotal, bom, bomTotal, opex, opexTotal, resumen } from "@/data/costs";
+import { capex, capexTotal, costoDije, costoDijeTotal, bom, bomTotal, opex, opexTotal, resumen } from "@/data/costs";
 import { safetySheets } from "@/data/safety-sheets";
 import {
   IconShield,
@@ -428,6 +428,34 @@ function CostSection() {
                 <td className="px-3 py-2.5 font-bold text-gold text-right font-mono">{capexTotal.costo}</td>
                 <td className="px-3 py-2.5" />
                 <td className="px-3 py-2.5 font-bold text-gold text-right font-mono">{capexTotal.depreciacion}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30 mb-8">
+        <h3 className="font-bold text-white mb-4">Costo del Dije (Producción)</h3>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr className="bg-black text-gold">
+                <th className="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+                <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Concepto</th>
+                <th className="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Costo (MXN)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {costoDije.map((row) => (
+                <tr key={row.id} className="border-b border-border-dark">
+                  <td className="px-3 py-2.5 text-[#999]">{row.id}</td>
+                  <td className="px-3 py-2.5 text-[#e5e5e5]">{row.operacion}</td>
+                  <td className="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">{row.costo}</td>
+                </tr>
+              ))}
+              <tr className="bg-body">
+                <td colSpan={2} className="px-3 py-2.5 font-semibold text-[#999] text-right">TOTAL COSTO DIJE:</td>
+                <td className="px-3 py-2.5 font-bold text-gold text-right font-mono">{costoDijeTotal}</td>
               </tr>
             </tbody>
           </table>
