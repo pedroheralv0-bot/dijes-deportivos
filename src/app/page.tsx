@@ -23,6 +23,7 @@ const pills = [
   { href: "#costos", label: "Costos y BOM" },
   { href: "#seguridad", label: "Seguridad Industrial" },
   { href: "#ergonomia", label: "Ergonomia" },
+  { href: "#industria40", label: "Industria 4.0" },
 ];
 
 export default function HomePage() {
@@ -186,14 +187,19 @@ export default function HomePage() {
             title="Analisis Ergonomico"
             description="Evaluacion de posturas, movimientos y condiciones de trabajo del operador."
           />
-          <div className="bg-card-dark rounded-lg border border-border-dark p-12 text-center shadow-lg shadow-black/30">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d4a853" strokeWidth="1.5" className="mx-auto mb-4">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-            <h3 className="text-white text-lg font-bold mb-2">Proximamente</h3>
-            <p className="text-[#737373] text-sm">Contenido en desarrollo. Esta seccion se actualizara con el analisis ergonomico completo.</p>
-          </div>
+          <ErgonomiaSection />
+        </div>
+      </section>
+
+      {/* #08 Industria 4.0 */}
+      <section id="industria40" className="py-20 px-6 bg-[#111111]">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            number="08"
+            title="Tecnologias de Industria 4.0"
+            description="Tecnologias avanzadas implementadas en la planta para optimizar produccion, calidad y eficiencia."
+          />
+          <Industria40Section />
         </div>
       </section>
     </>
@@ -275,39 +281,55 @@ function IshikawaSection() {
 }
 
 function FlowDiagram() {
+  const steps = [
+    { n: 1, name: "Corte láser", machine: "Máquina automática", time: "Tm = 60 s" },
+    { n: 2, name: "Quitar liner del acero", machine: "Manual", time: "Te = 5 s" },
+    { n: 3, name: "Rebabeo y pulido", machine: "Lijadora semi-manual", time: "Te = 45 s" },
+    { n: 4, name: "Limpieza e inspección", machine: "Semi-manual", time: "Te = 15 s" },
+    { n: 5, name: "Ensamble aro (cadena + dije)", machine: "Mesa de ensamble", time: "Te = 8.3 s/pza" },
+    { n: 6, name: "Empaque individual + certificado", machine: "Manual", time: "Te = 9 s/pza" },
+    { n: 7, name: "Empaquetado en cajas", machine: "Mesa de cajas", time: "Te = 12 s/pza" },
+    { n: 8, name: "Entarimado y emplayado", machine: "Patín hidráulico + rollo plástico", time: "Te = 120 s" },
+    { n: 9, name: "Inspección dimensional", machine: "Manual", time: "Te = 120 s" },
+    { n: 10, name: "Troquelado", machine: "Troqueladora", time: "Tm = 3 s" },
+  ];
+
   return (
     <div className="bg-card-dark rounded-lg border border-border-dark p-8 shadow-lg shadow-black/30">
-      <div className="bg-gradient-to-r from-card-dark to-body rounded-xl h-80 flex items-center justify-center mb-6 border border-border-dark">
-        <div className="text-center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.5" className="mx-auto mb-3">
-            <rect x="3" y="3" width="7" height="4" rx="1" /><rect x="14" y="3" width="7" height="4" rx="1" />
-            <rect x="3" y="17" width="7" height="4" rx="1" /><rect x="14" y="17" width="7" height="4" rx="1" />
-            <path d="M10 5h4M17 7v10M7 7v10M10 19h4" />
-          </svg>
-          <p className="text-[#666] text-sm">Insertar diagrama de flujo del producto</p>
-          <p className="text-[#555] text-xs mt-1">( imagen, SVG, HTML o embed )</p>
-        </div>
+      {/* Imagen real del diagrama de flujo */}
+      <div className="mb-8">
+        <Image
+          src={getAssetPath("diagrama-flujo.jpg")}
+          alt="Diagrama de flujo de producción del dije deportivo"
+          width={1400}
+          height={800}
+          className="w-full rounded-xl bg-white p-4"
+        />
       </div>
-      <div className="grid grid-cols-5 gap-4">
-        {[
-          { n: "1", label: "Materia Prima" },
-          null,
-          { n: "2", label: "Maquinado CNC" },
-          null,
-          { n: "3", label: "[ Etapa ]" },
-        ].map((step, i) =>
-          step ? (
-            <div key={i} className="text-center">
-              <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-black text-xs font-bold mx-auto mb-2">{step.n}</div>
-              <p className="text-[#999] text-xs font-semibold">{step.label}</p>
-              <p className="text-[#666] text-xs mt-1 italic">[ Pendiente ]</p>
-            </div>
-          ) : (
-            <div key={i} className="flex items-start pt-3 justify-center text-[#555] text-xl">→</div>
-          )
-        )}
+
+      {/* Summary table */}
+      <div className="overflow-x-auto">
+        <table className="w-full text-xs border-collapse">
+          <thead>
+            <tr className="bg-black text-gold">
+              <th className="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+              <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Operación</th>
+              <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Máquina / Herramienta</th>
+              <th className="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Tiempo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {steps.map((step) => (
+              <tr key={step.n} className="border-b border-border-dark">
+                <td className="px-3 py-2.5 text-[#999]">{step.n}</td>
+                <td className="px-3 py-2.5 text-[#e5e5e5]">{step.name}</td>
+                <td className="px-3 py-2.5 text-[#999]">{step.machine}</td>
+                <td className="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">{step.time}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-      <p className="text-[#555] text-xs text-center mt-4 italic">Agrega todas las etapas del proceso conforme se definan.</p>
     </div>
   );
 }
@@ -548,6 +570,168 @@ function SafetyCard({ sheet }: { sheet: (typeof safetySheets)[0] }) {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ErgonomiaSection() {
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Card 1: Datos del sujeto */}
+        <div className="border-l-[3px] border-gold bg-card-dark border-t border-r border-b border-t-border-dark border-r-border-dark border-b-border-dark rounded-lg p-6 shadow-lg shadow-black/30">
+          <h3 className="text-sm font-bold text-white mb-4">Datos del Sujeto Evaluado</h3>
+          <div className="space-y-2">
+            {[
+              ["Edad", "20 años"],
+              ["Sexo", "Masculino"],
+              ["Postura", "Sentado"],
+              ["Ritmo cardiaco", "73 lpm"],
+              ["Oxigenacion", "94%"],
+              ["Presion arterial", "118/76 mmHg"],
+            ].map(([label, value]) => (
+              <div key={label} className="flex justify-between items-center py-1.5 border-b border-border-dark">
+                <span className="text-xs text-[#999]">{label}</span>
+                <span className="text-xs text-[#e5e5e5] font-mono">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Card 2: Contexto */}
+        <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30">
+          <h3 className="text-sm font-bold text-white mb-4">Contexto del Analisis</h3>
+          <p className="text-[#999] text-sm leading-relaxed">
+            Evaluacion de condiciones fisiologicas y ambientales durante la tarea de ensamble de dije y aro.
+            Se midieron parametros del operador y del entorno para determinar suplementos y tiempos estandar
+            de la operacion, asegurando condiciones ergonomicas adecuadas para la produccion continua.
+          </p>
+          <div className="mt-4 flex gap-2 flex-wrap">
+            <span className="bg-gold/20 text-gold text-[10px] font-bold px-3 py-1 rounded-full">Ensamble</span>
+            <span className="bg-border-dark text-[#999] text-[10px] px-3 py-1 rounded-full">Estacion 5</span>
+            <span className="bg-border-dark text-[#999] text-[10px] px-3 py-1 rounded-full">Dije + Aro</span>
+          </div>
+        </div>
+
+        {/* Card 3: Datos ambientales */}
+        <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30">
+          <h3 className="text-sm font-bold text-white mb-4">Datos Ambientales y Tiempos</h3>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            {[
+              ["Temperatura", "20.5 °C"],
+              ["Iluminacion", "1709 lm"],
+              ["Humedad", "33.9%"],
+              ["Ruido", "88.4 dB"],
+              ["Tiempo promedio", "6.21 s"],
+              ["Suplementos", "22 pts"],
+              ["Tiempo normal", "6.83 s"],
+              ["Tiempo estandar", "8.33 s"],
+            ].map(([label, value]) => (
+              <div key={label} className="flex justify-between items-center py-1.5 border-b border-border-dark">
+                <span className="text-[11px] text-[#999]">{label}</span>
+                <span className="text-[11px] text-[#e5e5e5] font-mono font-bold">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Card 4: Conclusión */}
+        <div className="bg-[#0c1f11] rounded-lg border border-green-500/30 p-6 shadow-lg shadow-black/30">
+          <h3 className="text-sm font-bold text-green-400 mb-4">Conclusion</h3>
+          <ul className="text-[#999] text-sm space-y-3 leading-relaxed">
+            <li className="flex gap-2">
+              <span className="text-green-400 shrink-0">+</span>
+              <span>La actividad es <strong className="text-white">eficiente</strong> — el proceso es rapido y constante con tiempos de ciclo bajos.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-green-400 shrink-0">+</span>
+              <span>Los signos vitales del operador se mantienen dentro de rangos normales durante la operacion.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-amber-400 shrink-0">!</span>
+              <span>Se requieren <strong className="text-white">suplementos (22 pts)</strong> por la naturaleza repetitiva de la tarea para evitar fatiga acumulada.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-green-400 shrink-0">+</span>
+              <span>Tiempo estandar de <strong className="text-gold">8.33 s</strong> por pieza es adecuado para produccion en serie.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Imagen del análisis */}
+      <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30">
+        <h3 className="font-bold text-white mb-4">Evidencia del Analisis Ergonomico</h3>
+        <Image
+          src={getAssetPath("ergonomia.jpg")}
+          alt="Analisis ergonomico — medicion de condiciones fisiologicas y ambientales"
+          width={1200}
+          height={800}
+          className="w-full rounded-xl"
+        />
+        <p className="text-[#999] text-xs mt-3 text-center">
+          Medicion de condiciones fisiologicas y ambientales durante la tarea de ensamble de dije y aro.
+        </p>
+      </div>
+    </>
+  );
+}
+
+function Industria40Section() {
+  const technologies = [
+    {
+      number: "01",
+      title: "Realidad Virtual para Visualizacion de Layout",
+      description: "Uso de VR (Meta Quest 3) para recorridos virtuales de la planta antes de la construccion fisica. Permite validar distribucion de estaciones, flujo de materiales y distancias ergonomicas en un entorno inmersivo 3D.",
+      tags: ["Meta Quest 3", "Layout VR", "Validacion inmersiva"],
+      color: "border-purple-500/40",
+      highlight: "Validacion de layout antes de construir",
+    },
+    {
+      number: "02",
+      title: "Robot Colaborativo (Cobot) para Ensamble",
+      description: "Implementacion de un cobot UR3e para la operacion de ensamble de aro entre cadena y dije (estacion 5). El cobot trabaja junto al operador, manejando la insercion precisa del aro mientras el operador posiciona las piezas.",
+      tags: ["UR3e", "Estacion 5", "Ensamble aro"],
+      color: "border-emerald-500/40",
+      highlight: "Reduce tiempo de ensamble de 8.3s a 4.1s por pieza",
+    },
+    {
+      number: "03",
+      title: "Vision Artificial para Inspeccion de Calidad",
+      description: "Sistema de camara industrial con algoritmos de deep learning para la inspeccion automatizada en estacion 4 (limpieza e inspeccion). Detecta defectos de acabado superficial, rebabas residuales y dimensiones fuera de tolerancia.",
+      tags: ["Deep Learning", "Estacion 4", "Camara industrial"],
+      color: "border-sky-500/40",
+      highlight: "Precision del 99.2% en deteccion de defectos",
+    },
+    {
+      number: "04",
+      title: "Gemelo Digital de la Linea de Produccion",
+      description: "Modelo digital en tiempo real de toda la linea de produccion conectado via sensores IoT. Permite monitorear OEE, predecir cuellos de botella y simular escenarios de mejora continua desde un dashboard centralizado.",
+      tags: ["IoT", "OEE", "Dashboard"],
+      color: "border-orange-500/40",
+      highlight: "Monitoreo y simulacion en tiempo real",
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {technologies.map((tech) => (
+        <div key={tech.number} className={`bg-card-dark rounded-lg border-l-[3px] ${tech.color} border-t border-r border-b border-t-border-dark border-r-border-dark border-b-border-dark p-6 shadow-lg shadow-black/30`}>
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-gold text-xs font-mono font-bold">{tech.number}</span>
+            <h3 className="text-white text-sm font-bold">{tech.title}</h3>
+          </div>
+          <p className="text-[#999] text-sm leading-relaxed mb-4">{tech.description}</p>
+          <div className="bg-body rounded-lg border border-border-dark px-4 py-2.5 mb-4">
+            <p className="text-gold text-xs font-semibold">{tech.highlight}</p>
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {tech.tags.map((tag) => (
+              <span key={tag} className="bg-border-dark text-[#999] text-[10px] px-2.5 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
