@@ -282,22 +282,30 @@ function IshikawaSection() {
 
 function FlowDiagram() {
   const steps = [
-    { n: 1, name: "Corte láser", machine: "Máquina automática", time: "Tm = 60 s" },
-    { n: 2, name: "Quitar liner del acero", machine: "Manual", time: "Te = 5 s" },
-    { n: 3, name: "Rebabeo y pulido", machine: "Lijadora semi-manual", time: "Te = 45 s" },
-    { n: 4, name: "Limpieza e inspección", machine: "Semi-manual", time: "Te = 15 s" },
-    { n: 5, name: "Ensamble aro (cadena + dije)", machine: "Mesa de ensamble", time: "Te = 8.3 s/pza" },
-    { n: 6, name: "Empaque individual + certificado", machine: "Manual", time: "Te = 9 s/pza" },
-    { n: 7, name: "Empaquetado en cajas", machine: "Mesa de cajas", time: "Te = 12 s/pza" },
-    { n: 8, name: "Entarimado y emplayado", machine: "Patín hidráulico + rollo plástico", time: "Te = 120 s" },
-    { n: 9, name: "Inspección dimensional", machine: "Manual", time: "Te = 120 s" },
-    { n: 10, name: "Troquelado", machine: "Troqueladora", time: "Tm = 3 s" },
+    { n: 1, name: "Recepción e inspección de lámina", machine: "Inspección dimensional", process: "Manual", time: "120s", timeType: "TE" },
+    { n: 2, name: "Corte de lámina", machine: "Máquina de corte láser", process: "Automático", time: "60 s", timeType: "TM" },
+    { n: 3, name: "Troquelado", machine: "Troqueladora", process: "Automático", time: "3 s", timeType: "TM" },
+    { n: 4, name: "Quitar liner del acero", machine: "Herramienta manual", process: "Manual", time: "5 s", timeType: "TE" },
+    { n: 5, name: "Rebabeo y pulido", machine: "Lijadora", process: "Semi-manual", time: "45 s", timeType: "TE" },
+    { n: 6, name: "Limpieza e inspección", machine: "Limpieza manual / inspección", process: "Semi-manual", time: "15 s", timeType: "TE" },
+    { n: 7, name: "Decisión de calidad", machine: "Inspección (¿Cumple?)", process: "Manual", time: "15s", timeType: "TE" },
+    { n: 8, name: "Ensamble de aro entre cadena y dije", machine: "Mesa de ensamble", process: "Manual", time: "8.3 s/pieza", timeType: "TE" },
+    { n: 9, name: "Ensamble de cadena", machine: "Mesa de ensamble", process: "Manual", time: "7.9 s/pieza", timeType: "TE" },
+    { n: 10, name: "Empaque individual + certificado", machine: "Mesa de empaque", process: "Manual", time: "9 s/pieza", timeType: "TE" },
+    { n: 11, name: "Empaquetado en cajas", machine: "Mesa de cajas", process: "Semi-manual", time: "12 s/pieza", timeType: "TE" },
+    { n: 12, name: "Entarimado y emplayado", machine: "Patín hidráulico + rollo plástico", process: "Manual", time: "120s", timeType: "TE" },
   ];
 
+  const processColor: Record<string, string> = {
+    "Manual": "bg-blue-500/20 text-blue-400 border-blue-500/40",
+    "Automático": "bg-emerald-500/20 text-emerald-400 border-emerald-500/40",
+    "Semi-manual": "bg-amber-500/20 text-amber-400 border-amber-500/40",
+  };
+
   return (
-    <div className="bg-card-dark rounded-lg border border-border-dark p-8 shadow-lg shadow-black/30">
+    <div className="space-y-8">
       {/* Imagen real del diagrama de flujo */}
-      <div className="mb-8">
+      <div className="bg-card-dark rounded-lg border border-border-dark p-8 shadow-lg shadow-black/30">
         <Image
           src={getAssetPath("diagrama-flujo.jpg")}
           alt="Diagrama de flujo de producción del dije deportivo"
@@ -307,28 +315,44 @@ function FlowDiagram() {
         />
       </div>
 
-      {/* Summary table */}
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs border-collapse">
-          <thead>
-            <tr className="bg-black text-gold">
-              <th className="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
-              <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Operación</th>
-              <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Máquina / Herramienta</th>
-              <th className="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Tiempo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {steps.map((step) => (
-              <tr key={step.n} className="border-b border-border-dark">
-                <td className="px-3 py-2.5 text-[#999]">{step.n}</td>
-                <td className="px-3 py-2.5 text-[#e5e5e5]">{step.name}</td>
-                <td className="px-3 py-2.5 text-[#999]">{step.machine}</td>
-                <td className="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">{step.time}</td>
+      {/* Tiempos de Producción */}
+      <div className="bg-card-dark rounded-lg border border-border-dark p-8 shadow-lg shadow-black/30">
+        <h3 className="text-white text-lg font-bold mb-6">Tiempos de Producción</h3>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr className="bg-black text-gold">
+                <th className="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+                <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Proceso / Operación</th>
+                <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Máquina o herramienta</th>
+                <th className="text-center px-3 py-2 font-mono uppercase text-[10px]">Tipo de proceso</th>
+                <th className="text-right px-3 py-2 font-mono uppercase text-[10px]">Tiempo</th>
+                <th className="text-center px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Tipo de tiempo</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {steps.map((step) => (
+                <tr key={step.n} className="border-b border-border-dark">
+                  <td className="px-3 py-2.5 text-[#999]">{step.n}</td>
+                  <td className="px-3 py-2.5 text-[#e5e5e5]">{step.name}</td>
+                  <td className="px-3 py-2.5 text-[#999]">{step.machine}</td>
+                  <td className="px-3 py-2.5 text-center">
+                    <span className={`text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full border ${processColor[step.process]}`}>
+                      {step.process}
+                    </span>
+                  </td>
+                  <td className="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">{step.time}</td>
+                  <td className="px-3 py-2.5 text-center font-mono text-[#999]">{step.timeType}</td>
+                </tr>
+              ))}
+              <tr className="bg-body">
+                <td colSpan={4} className="px-3 py-2.5 font-semibold text-[#999] text-right">Tiempo Total de Producción:</td>
+                <td className="px-3 py-2.5 font-bold text-gold text-right font-mono">420.2 s</td>
+                <td className="px-3 py-2.5 font-bold text-gold text-center font-mono">≈ 7 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
