@@ -6,7 +6,7 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { SectionHeader } from "@/components/layout/section-header";
 import { FeaturesSectionWithHoverEffects } from "@/components/ui/features-section";
 import { getAssetPath } from "@/lib/utils";
-import { capex, capexTotal, costoDije, costoDijeTotal, bom, bomTotal, opex, opexTotal, resumen } from "@/data/costs";
+import { capex, capexTotal, costoDije, costoDijeTotal, bom, bomTotal, opex, opexTotal, resumen, costosMerma, costosMermaTotal, resumenMerma } from "@/data/costs";
 import { safetySheets } from "@/data/safety-sheets";
 import {
   IconShield,
@@ -541,6 +541,69 @@ function CostSection() {
           </table>
         </div>
       </div>
+
+      {/* Apartado separado: Costos con Merma 5% */}
+      <div className="mt-12 pt-10 border-t border-border-dark">
+        <h3 className="text-xl font-bold text-gold mb-2">Costos con Merma 5%</h3>
+        <p className="text-[#737373] text-xs mb-6">BOM original + merma, consumibles y embalaje — costo unitario ajustado.</p>
+
+        <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30 mb-8">
+          <h4 className="font-bold text-white mb-4">Desglose — Costo Unitario con Merma</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs border-collapse">
+              <thead>
+                <tr className="bg-black text-gold">
+                  <th className="text-left px-3 py-2 rounded-tl-lg font-mono uppercase text-[10px]">#</th>
+                  <th className="text-left px-3 py-2 font-mono uppercase text-[10px]">Concepto</th>
+                  <th className="text-right px-3 py-2 rounded-tr-lg font-mono uppercase text-[10px]">Costo (MXN)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {costosMerma.map((row) => (
+                  <tr key={row.id} className="border-b border-border-dark">
+                    <td className="px-3 py-2.5 text-[#999]">{row.id}</td>
+                    <td className="px-3 py-2.5 text-[#e5e5e5]">{row.concepto}</td>
+                    <td className="px-3 py-2.5 text-[#e5e5e5] text-right font-mono">{row.costo}</td>
+                  </tr>
+                ))}
+                <tr className="bg-body">
+                  <td colSpan={2} className="px-3 py-2.5 font-semibold text-[#999] text-right">TOTAL CON MERMA:</td>
+                  <td className="px-3 py-2.5 font-bold text-gold text-right font-mono">{costosMermaTotal}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="bg-card-dark rounded-lg border-2 border-gold p-6 shadow-lg shadow-black/30">
+          <h4 className="font-bold text-white mb-4">Resumen con Merma — Costo Total del Proyecto</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-black text-gold">
+                  <th className="text-left px-4 py-2.5 rounded-tl-lg font-mono uppercase text-[10px]">Metrica</th>
+                  <th className="text-right px-4 py-2.5 rounded-tr-lg font-mono uppercase text-[10px]">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {resumenMerma.map((row) => (
+                  <tr
+                    key={row.metrica}
+                    className={`border-b border-border-dark ${row.bold ? "bg-body" : ""} ${row.highlight ? "bg-gold/10" : ""}`}
+                  >
+                    <td className={`px-4 py-3 ${row.bold ? "font-bold text-white" : "text-[#999]"} ${row.highlight ? "font-bold text-gold text-lg" : ""}`}>
+                      {row.metrica}
+                    </td>
+                    <td className={`px-4 py-3 text-right font-mono ${row.bold ? "font-semibold text-[#e5e5e5]" : "text-[#e5e5e5]"} ${row.highlight ? "font-bold text-gold text-xl" : ""}`}>
+                      {row.valor}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
@@ -709,6 +772,18 @@ function ErgonomiaSection() {
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Infografía del análisis ergonómico */}
+      <div className="bg-card-dark rounded-lg border border-border-dark p-6 shadow-lg shadow-black/30 mb-6">
+        <h3 className="font-bold text-white mb-4">Infografia del Analisis Ergonomico</h3>
+        <Image
+          src={getAssetPath("ergonomia-infografia.jpg")}
+          alt="Infografia del analisis ergonomico en el ensamble de dije y aro con cadena"
+          width={1200}
+          height={600}
+          className="w-full rounded-xl"
+        />
       </div>
 
       {/* Imagen del análisis */}
