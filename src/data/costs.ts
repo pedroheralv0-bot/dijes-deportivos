@@ -25,12 +25,9 @@ export const bom = [
   { id: 5, material: "Costal para dije", pzas: "1", costo: "$10.00" },
   { id: 6, material: "Certificado de autenticidad", pzas: "1", costo: "$20.00" },
   { id: 7, material: "Pano de limpieza", pzas: "1", costo: "$1.00" },
-  { id: 8, material: "Merma y scrap (5%)", pzas: "—", costo: "$7.14" },
-  { id: 9, material: "Consumibles de producción (lijas, discos, pasta, gas láser, lubricante)", pzas: "—", costo: "$4.80" },
-  { id: 10, material: "Embalaje para envío (caja corrugado, cinta, etiqueta, relleno)", pzas: "1", costo: "$15.00" },
 ];
 
-export const bomTotal = "$169.68";
+export const bomTotal = "$142.74";
 
 export const opex = [
   { category: "Mano de Obra Directa", items: [
@@ -58,7 +55,24 @@ export const opexTotal = "$135,356.00";
 
 export const resumen = [
   { metrica: "Volumen de Produccion Mensual Meta", valor: "10,000", bold: true },
-  { metrica: "Total Costo Variable (BOM x Volumen)", valor: "$1,696,800.00" },
+  { metrica: "Total Costo Variable (BOM x Volumen)", valor: "$1,427,400.00" },
+  { metrica: "Total Gastos Fijos (OPEX Mensual)", valor: "$135,356.00" },
+  { metrica: "Total Depreciacion Mensual (CAPEX)", valor: "$73,666.67" },
+  { metrica: "COSTO TOTAL MENSUAL DEL PROYECTO", valor: "$1,636,422.67", bold: true },
+  { metrica: "COSTO UNITARIO REAL POR DIJE", valor: "$163.64", highlight: true },
+];
+
+export const costosMerma = [
+  { id: 1, concepto: "BOM por pieza (original)", costo: "$142.74" },
+  { id: 2, concepto: "Merma y scrap (5%)", costo: "$7.14" },
+  { id: 3, concepto: "Consumibles de producción (lijas, discos, pasta, gas láser, lubricante)", costo: "$4.80" },
+  { id: 4, concepto: "Embalaje para envío (caja corrugado, cinta, etiqueta, relleno)", costo: "$15.00" },
+];
+export const costosMermaTotal = "$169.68";
+
+export const resumenMerma = [
+  { metrica: "Volumen de Produccion Mensual Meta", valor: "10,000", bold: true },
+  { metrica: "Total Costo Variable (BOM+Merma x Volumen)", valor: "$1,696,800.00" },
   { metrica: "Total Gastos Fijos (OPEX Mensual)", valor: "$135,356.00" },
   { metrica: "Total Depreciacion Mensual (CAPEX)", valor: "$73,666.67" },
   { metrica: "COSTO TOTAL MENSUAL DEL PROYECTO", valor: "$1,905,822.67", bold: true },
